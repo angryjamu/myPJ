@@ -9,7 +9,7 @@ ul,ol,li{list-style: none;}
 img{ vertical-align: middle; /* 이미지 하단에 생성되는 여백제거를 위해서 작성하는 코드입니다. */}
 a{text-decoration: none; color: inherit;}
 fieldset{border: 0;}
-legend{display: block; width: 0; height: 0; overflow: hidden; text-align: -9999px;}
+legend{display: block; width: 0; height: 0; overflow: hidden; text-indent: -9999px;}
 button{border: 0; cursor: pointer;}
 
 /* 공통 레이아웃 */
