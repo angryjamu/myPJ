@@ -12,21 +12,23 @@
             animation: scroll 1.7s linear infinite;
             z-index: 9;
         }
-        .paint::after{
+        .paint::before{
             content: '';
             animation: backC 1.7s linear infinite;
             position: absolute;
             width: 100%;
             height: 100%;
-            transform: translate(-100%,-100%);
-            background-color: dodgerblue;
+            transform: translate(0%,-100%);
+            background-color: rgba(30, 143, 255, 0.556);
+            z-index: 1;
         }
         .paint:hover{
-            animation: none;
+            background-color: transparent;
         }
-        .paint:hover .paint::after{
-            opacity: 0;
-        }
+        /* .paint::before:hover{
+            background-color: darkgoldenrod;
+            top: 0;
+        } */
         @keyframes scroll {
             0%{transform: translateY(0);}
             50%{transform: translateY(30px);}
