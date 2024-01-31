@@ -23,12 +23,12 @@
             z-index: 1;
         }
         .paint:hover{
-            background-color: transparent;
+            animation: none;
+            animation: rotate .4s ease forwards;
         }
-        /* .paint::before:hover{
-            background-color: darkgoldenrod;
-            top: 0;
-        } */
+        .paint:hover::before{
+            display: none;
+        }
         @keyframes scroll {
             0%{transform: translateY(0);}
             50%{transform: translateY(30px);}
@@ -45,6 +45,14 @@
             100%{
                 top: 100%;
                 height: 0;
+            }
+        }
+        @keyframes rotate {
+            0%{
+                transform: rotate(0);
+            }
+            100%{
+                transform: rotate(180deg);
             }
         }
     </style>
