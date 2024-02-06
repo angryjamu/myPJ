@@ -1,3 +1,4 @@
+
 $(function(){
     // 변수에 담기
     let oneDepth = $('#header .gnb > li'), 
@@ -77,12 +78,7 @@ $(function(){
     let mainCon1LI = $('.mainCon1List > li'),
         mainCon1Bg = $('.mainCon1Bg > div');
 
-    console.log(mainCon1LI);
-    console.log(mainCon1Bg);
-
     mainCon1LI.each(function( idx ){
-        //$(this).mouseenter(function(){});
-        //$(this).mouseleave(function(){});
 
         $(this).hover(function(){
             mainCon1Bg.eq(idx).stop().fadeIn(600);
