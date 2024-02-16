@@ -298,6 +298,10 @@ a {
     width: 100%;
 }
 
+.swiper-button-next:after, .swiper-button-prev:after {
+    color: #fff;
+}
+
 .mainTodayArea {
     padding: 25px 0;
     text-align: center;
