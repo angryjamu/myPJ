@@ -1,0 +1,268 @@
+@charset "UTF-8";
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+p,
+form,
+fieldset {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+p {
+    line-height: 1.5;
+    color: #333;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    transition: all .4s;
+    z-index: 999;
+}
+
+.header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    color: #bcbcbc;
+}
+
+.header:hover {
+    background: #fff;
+    color: #000;
+}
+
+.header a {
+    color: #fff;
+}
+
+.header:hover a {
+    color: #000;
+}
+
+.header:hover .logo img {
+    background: url(../images/logo_black.png) no-repeat 50% / cover;
+}
+
+.header .headWrap {
+    max-width: 1540px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.header .leftbox {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.header .leftbox .logo {
+    width: 160px;
+}
+
+.header .leftbox .nav ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.header .leftbox .nav ul li {
+    padding-right: 80px;
+}
+
+.header .leftbox .nav ul li a {
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 80px;
+}
+
+.header .rightbox {
+    display: flex;
+    align-items: center;
+}
+
+.cont {
+    position: relative;
+    width: 100%;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper-slide .align {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 1320px;
+    height: 100%;
+    width: 100%;
+    padding: 0 60px;
+}
+
+.swiper-slide .align .txtbox {
+    left: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+    bottom: auto;
+    padding-top: 50px;
+    position: absolute;
+    text-align-last: left;
+    cursor: pointer;
+}
+
+.swiper-slide .align .txtbox .title {
+    font-size: 36px;
+    line-height: 1.33;
+    letter-spacing: -0.04em;
+}
+
+.swiper-slide .align .txtbox .onepoint {
+    font-size: 16px;
+    margin-top: 10px;
+    font-weight: 300;
+}
+
+.swiper-slide .align .txtbox .date {
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 12px;
+}
+
+.swiper-slide .align .btn_event_go {
+    position: absolute;
+    left: 60px;
+    bottom: 40px;
+    border: 1px solid #555;
+    width: 110px;
+    height: 32px;
+    line-height: 32px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 300;
+    color: #333;
+    background-color: transparent;
+    z-index: 2;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+
+.swiper-slide .align .btn_event_go:hover {
+    background-color: #666;
+    color: #fff;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    width: 60px;
+    height: 60px;
+}
+
+.align_box02 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    max-width: 1600px;
+    width: 100%;
+    z-index: 1;
+}
+
+.swiper-button-next {
+    background: url(../images/main_next_btn.png) no-repeat center / cover;
+}
+
+.swiper-button-prev {
+    background: url(../images/main_prev_btn.png) no-repeat center / cover;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    display: none;
+}
+
+.swiper-button-next:hover {
+    background: url(../images/main_next_btn_hover_1.png)
+}
+
+.swiper-button-prev:hover {
+    background: url(../images/main_prev_btn_hover_1.png)
+}
+
+.swiper_control {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    z-index: 1;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.swiper_control .swiper-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.swiper_pagination .swiper-pagination-bullet-active {
+    background-color: #333;
+}
+
+.swiper_pagination .swiper-pagination-bullet {
+    border-radius: 0;
+    flex: 1 0 1px;
+    opacity: 1;
+    height: 2px;
+}
