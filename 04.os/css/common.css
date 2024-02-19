@@ -25,10 +25,16 @@ ul,
 ol,
 li,
 p,
+button,
 form,
 fieldset {
     margin: 0;
     padding: 0;
+}
+
+section {
+    max-width: 1240px;
+    margin: auto;
 }
 
 ul,
@@ -45,6 +51,10 @@ a {
 p {
     line-height: 1.5;
     color: #333;
+}
+
+button {
+    font-family: 'Arita-dotum-Medium';
 }
 
 img {
@@ -201,7 +211,7 @@ img {
 
 .swiper-slide .align .txtbox .date {
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 600;
     margin-top: 12px;
 }
 
@@ -287,7 +297,7 @@ img {
 }
 
 .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
-    width: 12%;
+    width: 17%;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -407,4 +417,71 @@ img {
     height: 9px;
     margin-left: 10px;
     background: url(../images/icon_main_btn.png) no-repeat 0 0 / cover;
+}
+
+
+/* sec3 */
+.secToday .todaySect {
+    position: relative;
+    height: 275px;
+    margin: 85px 0;
+    letter-spacing: -0.03em;
+    color: #333;
+}
+
+.todayTxt {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    padding: 40px 56px 30px 60px;
+    cursor: pointer;
+}
+
+.todayTit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.todayTit h3 {
+    font-size: 28px;
+    letter-spacing: -0.05em;
+    font-weight: 500;
+}
+
+.todayTxt h4 {
+    font-size: 26px;
+    font-weight: 500;
+    margin-top: 40px;
+}
+
+.todayPrice {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.todayPrice .cost {
+    font-size: 18px;
+    color: #847A8A;
+    text-decoration: line-through;
+}
+
+.todayPrice .discount {
+    font-size: 30px;
+}
+
+.todayPrice .salePer {
+    font-size: 27px;
+    font-weight: 500;
+    color: #fff;
+    width: 74px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: #FD5C5C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
