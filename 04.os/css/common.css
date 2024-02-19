@@ -250,19 +250,52 @@ p {
     padding-right: 20px;
 }
 
-.swiper_control .swiper-pagination {
+.swiper-pagination {
+    flex: 0 0 320px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.swiper_pagination .swiper-pagination-bullet-active {
-    background-color: #333;
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+    width: 12%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-.swiper_pagination .swiper-pagination-bullet {
+.swiper-pagination-bullet {
+    width: 10px;
+    height: 2px;
+    background-color: rgba(51,51,51,0.1);
     border-radius: 0;
     flex: 1 0 1px;
     opacity: 1;
-    height: 2px;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #333;
+}
+
+.main_prd_list {
+    margin-top: 48px;
+}
+
+.main_prd_list .w1200 {
+    max-width: 1240px;
+    padding: 0 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main_prd_list .w1200 .tit_box {
+    display: flex;
+    align-items: center;
+}
+
+.main_prd_list .w1200 .tit_box .text01 {
+    font-size: 28px;
 }
