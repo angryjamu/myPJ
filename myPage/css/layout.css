@@ -39,6 +39,7 @@ header nav #gnb > li > a{display: block; height: 60px; font-family: 'Montserrat'
 .sec .info-wrap dl dt{float: left; font-weight: 700;}
 .sec .info-wrap dl dd{float: right; width: 450px;}
 .sec .col-right .thumb{text-align: right;}
+.sec .col-right .thumb img{width: 100%; height: 100%;}
 
 /* about 영역 */
 #about-wrap{height: 100vh; padding: 160px 0; box-sizing: border-box; background:#530af1; color: #fff;}
