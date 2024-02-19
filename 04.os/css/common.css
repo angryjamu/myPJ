@@ -313,6 +313,7 @@ img {
 
 .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
     margin: 0;
+    transition: all .4s;
 }
 
 .swiper-pagination-bullet-active {
