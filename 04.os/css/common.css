@@ -170,13 +170,13 @@ img {
     align-items: center;
 }
 
-.header .inner_box .right_box .nav_util {
+.header .rightbox .nav_util {
     display: flex;
     align-items: center;
     margin-right: 45px;
 }
 
-.header .inner_box .right_box .nav_util .item {
+.header .rightbox .nav_util .item {
     position: relative;
     margin-right: 15px;
     flex: 0 0 28px;
@@ -207,17 +207,21 @@ img {
     background-image: url(../images/Icon_search.svg);
 }
 
-.header .inner_box .right_box .nav_util .item .nav_util_icon {
+.header .rightbox .nav_util .item .nav_util_icon{
     width: 28px;
     height: 28px;
     display: block;
 }
 
-.header .inner_box .right_box .nav_util .item .nav_util_icon.icon_cart {
+.header .rightbox .nav_util .nav_util_icon.icon_cart {
     background: url(../images/icon_cart_white.png) no-repeat center / cover;
 }
 
-.header .inner_box .right_box .nav_util .item .nav_util_icon.icon_cart .num {
+.header:hover .nav_util .nav_util_icon.icon_cart {
+    background-image: url(../images/icon_cart_black.png);
+}
+
+.header .rightbox .nav_util .item .nav_util_icon.icon_cart .num {
     height: 18px;
     line-height: 18px;
     padding: 0 5px;
@@ -229,9 +233,24 @@ img {
     align-items: center;
     background-color: #fff;
     color: #333;
+    font-size: 13px;
     font-weight: 500;
     border-radius: 9px;
     text-align: center;
+}
+
+.header:hover .rightbox .nav_util .item .nav_util_icon.icon_cart .num {
+    background-color: #333;
+    color: #fff;
+}
+
+.header .rightbox .nav_util .item .nav_util_icon.icon_more {
+    background: url(../images/icon_more_white.png) no-repeat center / 28px 28px;
+    height: 80px;
+}
+
+.header:hover .rightbox .nav_util .item .nav_util_icon.icon_more {
+    background: url(../images/icon_more_black.png) no-repeat center / 28px 28px;
 }
 
 .cont {
