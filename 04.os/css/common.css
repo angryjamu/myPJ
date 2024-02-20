@@ -1,84 +1,5 @@
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
-@font-face {
-    font-family: 'Arita-dotum-Medium';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Arita-dotum-Medium.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-body {
-    font-family: 'Arita-dotum-Medium';
-}
-
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-dl,
-dt,
-dd,
-ul,
-ol,
-li,
-p,
-button,
-form,
-fieldset {
-    margin: 0;
-    padding: 0;
-}
-
-.w1200 {
-    max-width: 1240px;
-    padding: 0 20px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.inner1600 {
-    padding: 0;
-    max-width: 1400px;
-    margin: 0 auto;
-}
-
-ul,
-ol,
-li {
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-    color: #333;
-}
-
-p {
-    line-height: 1.5;
-}
-
-button {
-    font-family: 'Arita-dotum-Medium';
-}
-
-img {
-    vertical-align: middle;
-    max-width: 100%;
-    height: auto;
-}
-
-* {
-    box-sizing: border-box;
-}
-
-.clearfix::after {
-    content: '';
-    display: block;
-    clear: both;
-}
+@import url(reset.css);
 
 .header {
     position: fixed;
@@ -253,6 +174,66 @@ img {
     background: url(../images/icon_more_black.png) no-repeat center / 28px 28px;
 }
 
+.header div.inpSrchWrap i:hover {
+    background-image: url(../images/Icon_search_hover.png);
+}
+
+.header .rightbox .nav_util .nav_util_icon.icon_cart:hover {
+    background: url(../images/icon_cart_hover.png) no-repeat center / cover;
+}
+
+.header .rightbox .nav_util .item .nav_util_icon.icon_more:hover {
+    background: url(../images/icon_more_hover.png) no-repeat center / 28px 28px;
+}
+
+.rightbox .nav_drop {
+    display: flex;
+}
+
+.rightbox .nav_drop .item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 500;
+    margin-right: 24px;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    height: 80px;
+}
+
+.rightbox .nav_drop .item:last-child {
+    margin-right: 0;
+}
+
+.rightbox .nav_drop .item > a {
+    color: #fff;
+}
+
+.rightbox .nav_drop .item.arr .icon_drop_arr {
+    display: inline-block;
+    margin-left: 7px;
+    width: 7px;
+    height: 4px;
+    background: url(../images/icon_drop_white.png) no-repeat center / 7px 4px;
+}
+
+.header:hover .rightbox .nav_drop .item .icon_drop_arr {
+    background: url(../images/icon_drop_black.png) no-repeat center / 7px 4px;
+}
+
+.header:hover .rightbox .nav_drop .item > a,
+.header:hover .rightbox .nav_drop li {
+    color: #333;
+}
+
+.header .rightbox .nav_drop .item > a:hover,
+.header .rightbox .nav_drop .item:hover {
+    color: #6C801A;
+}
+
+/* main swiper */
 .cont {
     position: relative;
     width: 100%;
@@ -841,7 +822,7 @@ img {
 
 .wrap2 .left2 .mail span {
     font-weight: 700;
-    font-size: 13px;
+    font-size: 12px;
     color: #797979;
 }
 
