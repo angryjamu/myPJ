@@ -11,38 +11,9 @@ body {
     font-family: 'Arita-dotum-Medium';
 }
 
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-dl,
-dt,
-dd,
-ul,
-ol,
-li,
-p,
-button,
-form,
-fieldset {
+body,h1,h2,h3,h4,h5,h6,dl,dt,dd,ul,ol,li,p,button,form,fieldset {
     margin: 0;
     padding: 0;
-}
-
-.w1200 {
-    max-width: 1240px;
-    padding: 0 20px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.inner1600 {
-    padding: 0;
-    max-width: 1400px;
-    margin: 0 auto;
 }
 
 ul,
@@ -72,6 +43,19 @@ img {
 
 * {
     box-sizing: border-box;
+}
+
+.w1200 {
+    max-width: 1240px;
+    padding: 0 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.inner1600 {
+    padding: 0;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .clearfix::after {
