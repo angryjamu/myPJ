@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="change()">버튼</button>
+    <hr>
+    저는 빨간 <span>사과</span>를 좋아해서
+    아침마다 한 개씩 먹고 있어요. 운동할 때는 중간 중간에
+    <span>바나나</span>를 먹지요. 탄수화물 섭취가 빨라
+    힘이 납니다. 또한 달콤한 향기를 품은 <span>체리</span>와
+    여름 냄새 물씬 나는 <span>자두</span>를 좋아합니다.
+    최근에는 <span>샤인머스켓</span>이 먹고싶네요.
+    <span>멜론</span>도 좋고요.<span>복숭아</span>가 괜찮네요
+
+    <script>
+        function change() {
+            var SPAN = document.getElementsByTagName('span');
+            console.log(SPAN);
+            console.log(SPAN.length);
+
+            SPAN[0].style.color='red';
+
+            for (let i = 0; i < SPAN.length; i++) {
+                SPAN[i].style.backgroundColor='olive';
+                
+            }
+        }
+    </script>
+</body>
+
+</html>

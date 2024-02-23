@@ -1,0 +1,6 @@
+@charset 'utf-8';
+html,body,h1{padding: 0;margin: 0;}
+.wrap{position: relative;height: 100vh;width: 100%;text-align: center;}
+.wrap .bg{background: url(/img/125.jpg) no-repeat 0 0/contain;height: 100%;filter: grayscale(1);}
+.wrap .tit{position: absolute;width: 400px;height: 400px;top: 200px;left: 100px;background-color: transparent;z-index: 1;border-radius: 200px;line-height: 400px;cursor: pointer;}
+.wrap .tit:hover+.bg{filter: grayscale(0);}

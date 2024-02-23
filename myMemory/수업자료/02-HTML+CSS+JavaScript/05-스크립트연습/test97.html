@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <style>
+        ul{list-style: none; margin: 0; padding: 0;}
+
+        .lnb{width: 400px;}
+        .lnb > ul{}
+        .lnb > ul > li{}
+        .lnb > ul > li > a{display: block; background-color: yellow;}
+        .lnb .sub-lnb {}
+        
+    </style>
+</head>
+<body>
+    <div class="lnb">
+        <ul>
+            <li><a href="#">메뉴1</a>
+                <ul class="sub-lnb">
+                    <li><a href="#">서브메뉴1-1</a></li>
+                    <li><a href="#">서브메뉴1-2</a></li>
+                </ul>
+            </li>
+            <li><a href="#">메뉴2</a>
+                <ul class="sub-lnb">
+                    <li><a href="#">서브메뉴2-1</a></li>
+                    <li><a href="#">서브메뉴2-2</a></li>
+                </ul>
+            </li>
+            <li><a href="#">메뉴3</a>
+                <ul class="sub-lnb">
+                    <li><a href="#">서브메뉴3-1</a></li>
+                    <li><a href="#">서브메뉴3-2</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <script>
+        $(function(){
+            // 모든 .sub-lnb 를 닫기
+            // .sub-lnb중에서 첫번째것만 열어두기
+            $('.sub-lnb').hide();
+            $('.sub-lnb').first().show()
+
+            $('.lnb > ul > li > a').click(function(){
+                // 모든 .sub-lnb 를 닫기
+                // 클릭한 a태그의 다음요소인 .sub-lnb는 보이게한다
+                // 클릭한 a태그의 부모인 li에 'selected'클래스 추가
+
+                $('.sub-lnb').stop().slideUp()
+                $(this).next().stop().slideDown()
+
+
+            })
+
+        })
+    </script>    
+</body>
+</html>

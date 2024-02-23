@@ -1,0 +1,245 @@
+/* 초기화 */
+@font-face {
+  font-family: "S-CoreDream-3Light";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+
+body {
+  font-family: "S-CoreDream-3Light";
+  font-size: 16px;
+  line-height: 1.875;
+  color: #707070;
+}
+
+body,h1,h2,h3,h4,h5,h6,p,ul,th,td{margin: 0; padding: 0;}
+ul {list-style: none;}
+em {font-style: normal;}
+img {vertical-align: middle;}
+
+table{border-spacing: 0;}
+
+a {text-decoration: none;color: #707070;}
+
+/* 공통 */
+.inner {width: 980px; margin: 0 auto; border: 1px solid red; padding-top: 150px;}
+.inner:after {display: block; content: ""; clear: both;}
+.in{border: 1px solid red; width: 980px; margin: 0 auto;}
+.in:after{display: block; content: ""; clear: both;}
+
+/* 개별 */
+.header {background-color: #61c5e1;}
+.header .logo {float: left;}
+.header .gnb {float: right;}
+
+.header .gnb ul {}
+.header .gnb ul li {float: left; margin-left: 38px;}
+.header .gnb ul li a {
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 60px;
+  color: #fff;
+}
+
+.mainContainer {}
+.mainContainer .mainVisual {}
+.mainContainer .mainVisual img {width: 100%;}
+.mainContainer .profileWrap {}
+
+.mainContainer .profileWrap .logo2 {
+  border: 1px solid blue;
+  display: block;
+  text-align: center;
+  margin-bottom: 100px;
+}
+.mainContainer .title {
+  border-bottom: 3px solid #62c5e2;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 22px;
+  line-height: 2.727;
+  color: #61c5e1;
+  margin-bottom: 80px;
+}
+
+.mainContainer .profileWrap .list {
+  background-color: lime;
+  width: 840px;
+  margin: 0 auto;
+}
+.mainContainer .profileWrap .list:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+.mainContainer .profileWrap .list li {
+  float: left;
+  margin-left: 120px;
+}
+.mainContainer .profileWrap .list li:nth-child(1) {
+  margin-left: 0;
+  margin-bottom: 60px;
+}
+.mainContainer .profileWrap .list li:nth-child(2) {
+  margin-bottom: 60px;
+}
+.mainContainer .profileWrap .list li:nth-child(3) {
+  margin-bottom: 60px;
+}
+.mainContainer .profileWrap .list li:nth-child(4) {
+  margin-left: 0;
+}
+
+.mainContainer .profileWrap .list li .thumb {
+}
+.mainContainer .profileWrap .list li .desc {
+}
+.mainContainer .profileWrap .list li .desc .name {
+  font-weight: 700;
+  color: #242424;
+  overflow: hidden;
+  border-bottom: 3px solid #62c5e2;
+  margin-top: 23px;
+}
+.mainContainer .profileWrap .list li .desc .name a {float: right;}
+.mainContainer .profileWrap .list li .desc .info {
+  line-height: 1.5;
+  margin-top: 20px;
+}
+.mainContainer .profileWrap .list li .desc .info p {
+}
+.mainContainer .profileWrap .list li .desc .info p em {
+  font-weight: 700;
+}
+
+.mainContainer .albumWrap {}
+
+.mainContainer .albumWrap .albumHeader,
+.mainContainer .albumWrap .albumContent{
+  width: 840px; margin: 0 auto;
+}
+
+.mainContainer .albumWrap .albumHeader .thumb {
+  float: left;
+}
+.mainContainer .albumWrap .albumHeader .trackList {
+  float: left;
+  margin-left: 86px;
+}
+.mainContainer .albumWrap .albumHeader .trackList .tit {
+  border-bottom: 1px solid #62c5e2;
+  padding-bottom: 9px;
+  margin-bottom: 23px;
+}
+
+.mainContainer .albumWrap .albumHeader .trackList .list {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 2.142;
+}
+
+.mainContainer .albumWrap .albumHeader .albumDesc {
+  clear: both;
+}
+.mainContainer .albumWrap .albumHeader .albumDesc p {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.66;
+  color: #62c5e2;
+}
+
+.mainContainer .scheduleWrap{}
+.mainContainer .scheduleWrap .tableWrap{}
+.mainContainer .scheduleWrap .tableWrap .scheduleTbl{}
+.mainContainer .scheduleWrap .tableWrap .scheduleTbl thead{}
+.mainContainer .scheduleWrap .tableWrap .scheduleTbl thead tr{}
+.mainContainer .scheduleWrap .tableWrap .scheduleTbl thead tr:nth-child(1){background-color: yellow;}
+.mainContainer .scheduleWrap .tableWrap .scheduleTbl thead tr:nth-child(1) th{height: 60px;}
+.mainContainer .scheduleWrap .tableWrap .scheduleTbl thead tr:nth-child(2) th{height: 40px; border-bottom: 3px solid #78cde4;}
+.mainContainer .scheduleWrap .tableWrap .scheduleTbl thead tr th{width: 140px; }
+
+.mainContainer .scheduleWrap .tableWrap .scheduleTbl thead tr th:nth-child(1) .clorRed{
+  color: red;
+}
+
+.mainContainer .scheduleWrap .tableWrap .scheduleTbl tbody tr td{
+  height: 90px; vertical-align: top;
+  padding: 15px 0 0 20px;
+  border-bottom: 1px solid #8c8c8c;
+}
+
+.mainContainer .scheduleWrap  .iconWrap{
+  font-size: 0; text-align: right;
+  border: 1px solid greenyellow;
+  margin-top: 32px;
+}
+.mainContainer .scheduleWrap .iconWrap span{
+  border: 1px solid blue;
+  display: inline-block; margin-left: 20px;
+  font-size: 14px;
+}
+
+.mainContainer .noticeWrap{}
+.mainContainer .noticeWrap .talbeWrap{}
+.mainContainer .noticeWrap .talbeWrap .noticeTbl{width: 100%;}
+.mainContainer .noticeWrap .talbeWrap .noticeTbl thead{}
+.mainContainer .noticeWrap .talbeWrap .noticeTbl thead tr{}
+.mainContainer .noticeWrap .talbeWrap .noticeTbl thead tr th{
+  border-top: 1px solid #8c8c8c;
+  border-bottom: 1px solid #8c8c8c;
+  height: 50px;
+}
+.mainContainer .noticeWrap .talbeWrap .noticeTbl tbody{}
+.mainContainer .noticeWrap .talbeWrap .noticeTbl tbody tr{}
+.mainContainer .noticeWrap .talbeWrap .noticeTbl tbody tr td{
+  border-bottom: 1px solid #8c8c8c;
+  height: 50px; text-align: center;
+}
+
+.mainContainer .noticeWrap .talbeWrap .noticeTbl tbody tr td:nth-child(2){
+  text-align: left;
+}
+
+.mainContainer .noticeWrap .pagination{text-align: center;}
+.mainContainer .noticeWrap .pagination a{
+  border: 1px solid blue;
+  display: inline-block; margin-left: 10px;
+  width: 30px; height: 30px;
+  border-radius: 15px;
+  line-height: 30px; text-align: center;
+}
+
+.mainContainer .noticeWrap .pagination a:nth-child(1){margin-left: 0;}
+
+
+.footer{padding: 50px 0; text-align: center;
+  background: url(../images/footer_bg.png) no-repeat center center;
+  background-size: cover;
+}
+.footer .sns{display: inline-block;}
+.footer .sns li{float: left; margin-left: 30px;}
+.footer .sns li:nth-child(1){margin-left: 0;}
+
+.footer .sns li a{
+  display: block; text-indent: -9999px;
+  width: 46px; height: 46px;
+  border: 1px solid blue;
+}
+.footer .sns li .f{background: url(../images/ico_f.png) no-repeat;}
+.footer .sns li .t{background: url(../images/ico_t.png) no-repeat;}
+.footer .sns li .d{background: url(../images/ico_d.png) no-repeat;}
+.footer .sns li .i{background: url(../images/ico_i.png) no-repeat;}
+.footer .sns li .w{background: url(../images/ico_w.png) no-repeat;}
+.footer .copy{font-size: 14px; color: #fff;}
+.footer .footLogo{}
+
+

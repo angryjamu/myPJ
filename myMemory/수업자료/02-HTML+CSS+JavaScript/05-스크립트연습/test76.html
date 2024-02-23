@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tab_Wrap{}
+        .tab_Wrap .tab_btn{}
+        .tab_Wrap .tab_btn button{
+            background-color: #fff; border: 0; 
+            cursor: pointer;
+        }
+        .tab_Wrap .tab_btn button.active{background-color: #000; color: #fff;}
+        .tab_Wrap .tab_con{}
+        .tab_Wrap .tab_con .con{display: none;}
+        .tab_Wrap .tab_con .con.active{display: block;}
+    </style>
+</head>
+<body>
+    <div class="tab_Wrap">
+        <div class="tab_btn">
+            <button data-tab="#con1" class="active">탭메뉴1</button>
+            <button data-tab="#con2">탭메뉴2</button>
+            <button data-tab="#con3">탭메뉴3</button>
+        </div>
+        <div class="tab_con">
+            <div id="con1" class="con active">탭내용1</div> 
+            <div id="con2" class="con">탭내용2</div>
+            <div id="con3" class="con">탭내용3</div>
+        </div>
+    </div>  
+    <script>
+        // 탭 버튼들을 변수에 담기
+        // 탭 내용을 변수에 담기
+        // 여러개니까 for문 개수 length
+        // 클릭이벤트 등록
+        const tabLinks = document.querySelectorAll('.tab_btn button')
+        const tabCons = document.querySelectorAll('.tab_con .con')
+
+        for( let i = 0; i < tabLinks.length; i++ ){
+            tabLinks[i].addEventListener('click', function(){
+                console.log(this)
+                for( let j = 0; j < tabLinks.length; j++ ){
+                    tabLinks[j].classList.remove('active');
+                    tabCons[j].classList.remove('active');
+                }// 내부 for문의 끝부분
+                this.classList.add('active');
+
+                const dataTab = this.getAttribute('data-tab')
+                
+                document.querySelector( dataTab ).classList.add('active');
+            })
+        }
+        
+
+    </script>
+    
+</body>
+</html>

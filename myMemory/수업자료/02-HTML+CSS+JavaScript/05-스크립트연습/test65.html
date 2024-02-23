@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{width: 600px;}
+        .container .sec{
+            background-color: aqua; max-height:  600px;
+            transition: max-height 0.5s ease-out ;
+        }
+        .container .sec.collapsed{max-height: 0; overflow: hidden;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section class="sec">섹션입니다.</section>
+        <section class="sec collapsed">
+            섹션 더보기 입니다.<br>
+            섹션 더보기 입니다.<br>
+            섹션 더보기 입니다.<br>
+            섹션 더보기 입니다.
+        </section>
+        <button id="toggle-button">토글버튼</button>
+    </div>
+
+    <script>
+        const toggleBtn = document.getElementById('toggle-button');
+        const section = document.querySelector('.collapsed');
+
+        console.log(section);
+
+        toggleBtn.addEventListener('click', function(){
+            section.classList.toggle('collapsed');
+        });
+
+    </script>
+
+</body>
+</html>

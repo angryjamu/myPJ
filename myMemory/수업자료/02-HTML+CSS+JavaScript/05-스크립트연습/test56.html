@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>가장 좋아하는 색상은?</h3>
+    <label> <input type="radio" name="color" id="" value="빨강" checked>  빨강 </label>
+    <label> <input type="radio" name="color" id="" value="노랑">  노랑 </label>
+    <label> <input type="radio" name="color" id="" value="파랑">  파랑 </label>
+    <label> <input type="radio" name="color" id="" value="초록">  초록 </label>
+
+    <button type="button">제출하기</button> <!--button 태그가 더 나중에 나온 명령어 -->
+
+    <input type="button" value="제출하기" onclick="myFun()">
+
+    <script>
+        const arrRadio = document.getElementsByName("color");
+
+        console.log(arrRadio);
+
+        function myFun(){
+            // 라디오버튼 여러개 이므로 
+            // 라디오버튼의 개수만큼 
+            // 반복문을 통해서 for문
+            // checked - true/false 체크여부 확인 if문
+
+            for( let i = 0 ; i < arrRadio.length ; i++ ){
+                if( arrRadio[i].checked ){
+                    alert( arrRadio[i].value  + '를 좋아하시는구나~~~' );
+                }
+            }
+
+
+        }
+
+    </script>
+
+</body>
+</html>

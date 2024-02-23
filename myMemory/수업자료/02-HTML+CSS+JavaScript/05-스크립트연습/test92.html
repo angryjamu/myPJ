@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <!-- 1. 제이쿼리 라이브러리 로드 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- 2. 플러그인 로드 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
+
+    <style>
+        .wrap{position: relative;}
+        .box{
+            background-color: black; width: 300px; height: 400px;
+            position: fixed; left : 0; top: 0;
+            margin-left: -280px;
+            color: #fff;
+        }
+        .box .btn{
+            position: absolute; right: -60px; top: 0;
+            width: 60px; height: 30px;
+            color: #fff;
+            border: 0; cursor: pointer;
+            background: pink url(images/arrow-right-fill.png) no-repeat right 2px center;
+            background-size: 12px auto;
+        }
+
+        .box .btn.on{background-image: url(images/arrow-left-fill.png);}
+
+        .box .btn i{font-size: 12px; color: yellow;}
+
+        header{background-color: yellow; height: 100px;}
+        .content{background-color: lime; height: 2000px;}
+        footer{background-color: pink; height: 100px;}
+    </style>
+</head>
+<body>
+    <div class="wrap">    
+        <div class="box">
+            <button type="button" class="btn">
+                <span>열기</span>
+                
+            </button>
+            박스입니다.
+        </div>
+        <header>헤더영역</header>
+        <div class="content">메인컨텐츠</div>
+        <footer>푸터영역</footer>
+    </div>
+
+    <script>
+        $(function(){
+            $('.btn').click(function(){
+                $(this).toggleClass('on'); // on이 추가되므로 if문이 먼저 실행된다.  
+
+                if($(this).hasClass('on')){
+                    $(this).parent().animate({'marginLeft' : '0'} , 300 , 'easeOutElastic' );
+                }else{
+                    $(this).parent().animate({'marginLeft' : '-280px'} , 600 , 'easeOutElastic');
+                }
+            })
+        })
+    </script>
+</body>
+</html>

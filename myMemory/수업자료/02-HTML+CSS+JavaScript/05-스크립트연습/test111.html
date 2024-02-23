@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu {
+            width: 200px;
+            height: 60px;
+            color: violet;
+            background-color: honeydew;
+            position: fixed;
+            right: 0;
+            top: 0;
+            border-radius: 30px;
+            z-index: 9;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        .menu span {
+            border-bottom: 3px solid transparent;
+        }
+
+        .menu span:hover {
+            border-bottom: 3px solid #000;
+            cursor: pointer;
+        }
+
+        .cont {
+            height: 100vh;
+        }
+
+        .cont:nth-of-type(2) {
+            background-color: lemonchiffon;
+        }
+
+        .cont:nth-of-type(3) {
+            background-color: lavenderblush;
+        }
+
+        .cont:nth-of-type(4) {
+            background-color: lavender;
+        }
+
+        .menu span::after {
+            content: '';
+            display: block;
+            width: 100%;
+            color: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="menu">
+        <span>1번</span>
+        <span>2번</span>
+        <span>3번</span>
+    </div>
+    <div class="cont">1번 영역</div>
+    <div class="cont">2번 영역</div>
+    <div class="cont">3번 영역</div>
+
+    <script>
+        let spans = document.querySelectorAll('.menu span')
+        let contents = document.querySelectorAll('.cont')
+        let firstTop = contents[0].offsetTop
+        let secondTop = contents[1].offsetTop
+        let thirdTop = contents[2].offsetTop
+
+        console.log(firstTop, secondTop, thirdTop)
+
+        spans[0].onclick = function () {
+            window.scroll({
+                top: firstTop,
+                behavior: 'smooth'
+            })
+        }
+        spans[1].onclick = function () {
+            window.scroll({
+                top: secondTop,
+                behavior: 'smooth'
+            })
+        }
+        spans[2].onclick = function () {
+            window.scroll({
+                top: thirdTop,
+                behavior: 'smooth'
+            })
+        }
+    </script>
+</body>
+
+</html>

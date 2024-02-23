@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p><a href="#" target="_blank" id="link-text">링크걸린텍스트</a></p>
+    <input type="checkbox" name="" id="chk1" checked><label for="chk1">독서</label>
+    <input type="checkbox" name="" id="chk2"><label for="chk2">캠핑</label>
+    <input type="checkbox" name="" id="chk3" checked><label for="chk3">기타</label>
+
+    <input type="checkbox" name="" id="chk4" checked><label for="chk4">수영</label>
+
+    <button id="btn">버튼</button>
+
+    <button id="btn2" onclick="changeAttr()">버튼2</button>
+
+    <script>
+        const link = document.getElementById('link-text');
+        const chk1 = document.getElementById('chk1')
+        const chk2 = document.getElementById('chk2')
+        const chk3 = document.getElementById('chk3')
+        const chk4 = document.getElementById('chk4')
+        const btn = document.getElementById('btn')
+        const btn2 = document.getElementById('btn2')
+
+
+        link.setAttribute('href' , 'http://www.naver.com/')
+        chk2.setAttribute('checked' , true)
+        chk4.checked = true;
+
+        btn.addEventListener('click', function(){
+            chk1.checked = false
+        })
+
+        function changeAttr(){
+            console.log('함수가호출되었다')
+            btn2.innerText = '버튼이 클릭됨'
+            btn2.setAttribute('type', 'button')
+        }
+
+        
+        
+            
+    </script>
+
+</body>
+</html>

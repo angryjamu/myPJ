@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 제이쿼리 라이브러리 링크 -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <!-- css 작성 시작 -->
+    <style>
+        .box{background-color: lime; width: 200px; height: 200px;}
+        .box.active{border: 5px solid red;}
+    </style>
+</head>
+<body>
+    <!-- html 작성 시작 -->
+    <button type="button" class="add-btn">넣기</button>
+    <button type="button" class="remove-btn">빼기</button>
+    <button type="button" class="toggle-btn">토글</button>
+    <div class="box">박스입니다.</div>
+    <!-- 제이쿼리 작성 시작 -->
+    <script>
+        $(function(){
+          $('.add-btn').click(function(){
+            $('.box').addClass('active');
+          }); 
+          $('.remove-btn').click(function(){
+            $('.box').removeClass('active');
+          });
+          $('.toggle-btn').click(function(){
+            $('.box').toggleClass('active');
+          });
+        });
+    </script>
+</body>
+</html>

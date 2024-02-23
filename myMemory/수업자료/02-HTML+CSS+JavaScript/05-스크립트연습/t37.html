@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="title">제목1단계</h1>
+    <h2>제목2단계</h2>
+    <h3>제목3단계 중에서 1번째</h3>
+    <p>
+        첫번째 문장입니다.<br>
+        다음줄입니다.
+    </p>
+    <h3>제목3단계 중에서 2번째</h3>
+    <p>
+        두번쨰 문장입니다.<br>
+        다음줄입니다.
+    </p>
+    <h3>제목3단계 중에서 3번째</h3>
+    <p>
+        세번쨰 문장입니다.<br>
+        다음줄입니다.
+    </p>
+    <h3>제목3단계 중에서 4번째</h3>
+    <p>
+        네번쨰 문장입니다.<br>
+        다음줄입니다.
+    </p>
+    <h3>제목3단계 중에서 5번째</h3>
+    <p>
+        다섯번쨰 문장입니다.<br>
+        다음줄입니다.
+    </p>
+    <h3>제목3단계 중에서 6번째</h3>
+    <p>
+        여섯번쨰 문장입니다.<br>
+        다음줄입니다.
+    </p>
+    <script>
+        const pList=document.querySelectorAll('p:nth-of-type(2n)');
+        console.log(pList);
+
+        for( p of pList){
+            p.style.backgroundColor='lightgreen';
+        };
+
+    </script>
+</body>
+</html>

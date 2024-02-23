@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a{
+            display: block;
+        }
+        .list::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+        li{
+            float: left;
+            width: 300px;
+        }
+        .list a{
+            position: relative;
+        }
+        .img{
+
+        }
+        .over{
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            transition: opacity .8s ease-in-out;
+        }
+        .list a:hover .over{
+            opacity: 1;
+        } 
+    </style>
+</head>
+<body>
+    <ul class="list">
+        <li>
+            <a href="#">
+                <div class="img">
+                    <img src="img/mascara_sub1.jpg" alt="메인이미지" width="300" height="300">
+                </div>
+                <div class="over">
+                    <img src="img/mascara_main1.jpg" alt="서브이미지" width="300" height="300">
+                </div>
+            </a>
+        </li>
+    </ul>
+</body>
+</html>

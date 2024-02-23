@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 초기화 */
+        body,ul{margin: 0; padding: 0;}
+        ul{list-style: none;}
+        a{text-decoration: none; color: #000;}
+
+        /* 레이아웃 */
+        .tab_wrap{
+            width: 800px; margin: 0 auto; background-color: aqua;
+            position: relative;
+        }
+        .tab_wrap .tabs{overflow: hidden; }
+        .tab_wrap .tabs li{
+            float: left; width: 33.333%; padding-left: 10px; box-sizing: border-box;
+            
+        }
+        .tab_wrap .tabs li:nth-child(1){padding-left: 0;}
+
+        .tab_wrap .tabs li a{
+            display: block; border: 1px solid red; 
+            padding: 0 20px;
+            line-height: 80px;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .tab_wrap .tabs li.is_on a{background-color: #000; color: #fff; font-weight: bold;}
+
+        .tab_wrap .tabs li .con{
+            background-color: pink;
+            position: absolute; left: 0; top: 80px;
+            width: 100%; height: 300px;
+            display: none;
+        }
+
+        .tab_wrap .tabs li.is_on .con{display: block;}
+
+    </style>
+</head>
+<body>
+    <p>
+        탭메뉴와 탭내용을 같이 묶어서 구조를 짠 경우
+    </p>
+
+    <div class="tab_wrap">
+        <ul class="tabs">
+            <li class="is_on">
+                <a href="#">탭메뉴1</a>
+                <div id="tab1" class="con">탭1내용</div>
+            </li>
+            <li>
+                <a href="#">탭메뉴2</a>
+                <div id="tab2" class="con">탭2내용</div>
+            </li>
+            <li>
+                <a href="#">탭메뉴3</a>
+                <div id="tab3" class="con">탭3내용</div>
+            </li>   
+        </ul>
+    </div>
+    <script>
+        //tabs 안에 있는 li를 변수에 담는다
+        // for문 작성
+        // 실제로 클릭하는 a태그를 찾아 tabLink 변수에 담는다
+        // tabLink를 클릭하면 함수 실행
+        // 내부 for문 작성
+        const tabLi = document.querySelectorAll('.tabs li')
+
+        for( let i = 0; i < tabLi.length; i++){
+            const tabLink = tabLi[i].querySelector('a')
+            tabLink.addEventListener('click', function(){
+                for( let j = 0; j < tabLi.length; j++){
+                    tabLi[j].classList.remove('is_on');
+                }// 내부 for문 끝나는부분
+                this.parentNode.classList.add('is_on');
+            })
+        }
+
+    </script>
+</body>
+</html>

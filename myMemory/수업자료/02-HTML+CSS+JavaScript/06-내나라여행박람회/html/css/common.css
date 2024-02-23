@@ -1,0 +1,56 @@
+/* -----------------------------------공통----------------------------------- */
+html,body,header,div,h1,h2,h3,h4,h5,h6,nav,a,img,ul,ol,li,p{
+margin: 0;padding: 0;list-style: none;text-decoration: none;font-family: '맑은 고딕','돋음',Arial, Helvetica, sans-serif;color: #000;font-size: 16px;line-height: 1.5;}
+.wrap{width: 1280px;margin: 0 auto;}
+img{vertical-align: middle;}
+/* -----------------------------------헤더---------------------------------- */
+.header{position: fixed;left: 0;top: 0;width: 100%;z-index: 9999;background-color: #f48e9806;}
+.header .wrap{margin: 0 auto;width: 1280px;}
+.wrap::after{content: '';display: block;clear: both;}
+h1{float: left;}
+h1 a{display: block;}
+h1 a img{width: 93px;height: auto;}
+.gnb{float: right;}
+.gnb ul::after{content: '';display: block;clear: both;}
+.gnb>ul>li{float: left;position: relative;}
+.gnb>ul>li>a{display: block;padding: 0 45px;line-height: 100px;font-size: 22px;color: #fff;font-weight: 400;}
+.gnb ul{content: '';display: block;clear: both;}
+.gnb .depth2{background-color: #3282c778;box-shadow: 4px 4px 5px #ababab;position: absolute;left: 0;top: 100px;width: 100%;}
+.gnb .depth2 li{text-align: center;}
+.gnb>ul>li a:hover{font-weight: bold;}
+.gnb .depth2 li a{color: #fff;line-height: 40px;}
+.menu{position: absolute;right: 60px;top: 80px;}
+.menu span{background-color: snow;width: 30px;height: 2px;display: block;}
+.menu span:nth-child(2){margin-top: 4px;}
+.menu span:nth-child(3){margin-top: 4px;}
+/* -----------------------------------비주얼영역---------------------------------- */
+.visual{height: 1150px;background: url(../img/main_v_20230324-1.jpg)no-repeat center center/cover;}
+/* -----------------------------------소개영역---------------------------------- */
+.overview{padding-top: 110px;padding-bottom: 160px;background: url(../img/wave_01.png) no-repeat 50% 100%/100% 0;background-size: 100% auto;}
+.wrap ul .left-col{float: left;}
+.wrap ul .right-col{float: right;}
+.overview .wrap ul{overflow: hidden;}
+/* -----------------------------------메인보드영역---------------------------------- */
+.main-board{padding: 60px 0;}
+.notice{width: 50%;float: left;}
+.notice h2{font-size: 24px;margin-bottom: 20px;}
+.notice h2 img{vertical-align: 2px;}
+.notice ul li{overflow: hidden;}
+.notice ul li a{font-size: 18px;margin-bottom: 5px;}
+.notice ul li a:hover{text-decoration: underline;}
+.notice ul li .date{float: right;font-size: 14px;}
+.banner{width: 50%;float: right;padding-left: 20px;box-sizing: border-box;}
+.main-board::after{content: '';display: block;clear: both;}
+.banner li a{font-weight: bold;border: 2px solid #f48e99;display: block;text-align: center;height: 180px;padding: 53px 0 52px;box-sizing: border-box;color: #f48e99;}
+.banner li a:hover{background-color: #f48e99;color: #fff;}
+.banner1{float: left;width: 48%;}
+.banner2{float: right;width: 48%;}
+.banner li a p{font-size: 30px;color: #f48e99;}
+.banner li a:hover p{color: #fff;}
+.banner li a span{font-size: 20px;display: inline-block;}
+/* -----------------------------------풋터보드영역---------------------------------- */
+footer{background-color: #323536;}
+.wrap{padding: 40px 0;}
+.info li{color: whitesmoke;}
+.info li:nth-child(1){margin-bottom: 10px;}
+.info li:nth-child(2){color: #919191;font-size: 14px;}

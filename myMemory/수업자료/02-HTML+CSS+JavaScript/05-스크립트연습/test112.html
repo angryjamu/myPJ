@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<style>
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        background-color: lemonchiffon;
+        height: 100px;
+    }
+
+    .sec {
+        height: 100vh;
+    }
+
+    .sec-1 {
+        background-color: lavender;
+    }
+
+    .sec-2 {
+        background-color: lavenderblush;
+    }
+
+    .sec-3 {
+        background-color: honeydew;
+    }
+
+    .sec-4 {
+        background-color: thistle;
+    }
+
+    footer {
+        height: 300px;
+        background-color: azure;
+    }
+
+    .paging {
+        position: fixed;
+        right: .3vw;
+        top: 50vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .paging span {
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        background: url(img/circle-line.png) no-repeat 0 0/20px;
+        cursor: pointer;
+        text-indent: -9999px;
+    }
+
+    .paging span.on {
+        background: url(img/circle-fill.png)no-repeat 0 0/20px;
+    }
+
+    .btn-top {
+        position: fixed;
+        right: 1vw;
+        bottom: 3vh;
+    }
+</style>
+
+<body>
+    <header>헤더영역</header>
+    <section class="sec sec-1">섹션1</section>
+    <section class="sec sec-2">섹션2</section>
+    <section class="sec sec-3">섹션3</section>
+    <section class="sec sec-4">섹션4</section>
+    <footer>풋터영역</footer>
+    <div class="paging">
+        <span class="on">1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+    </div>
+    <div class="btn-top">
+        <button type="button">위로</button>
+    </div>
+
+    <script>
+        $(function () {
+            $('.paging span').click(function () {
+                $(this).addClass('on')
+                $(this).siblings().removeClass('on')
+                let i = $(this).index()
+                let offsetT = $('.sec').eq(i).offset().top
+                $('html, body').animate({
+                    scrollTop: offsetT
+                })
+            }) //페이징 클릭 애니메이션
+
+            $(window).scroll(function () {
+                let winScrollTop = $(window).scrollTop()
+                let winHeight = $(window).height() * .06
+                let total = winScrollTop + winHeight
+                $('.sec').each(function (idx) {
+                    let offsetT = $('.sec').eq(idx).offset().top
+                    if (offsetT <= total) {
+                        $('.paging span').removeClass('on')
+                        $('.paging span').eq(idx).addClass('on')
+                    }
+                })
+            }) //.sec-1~4 스크롤 인디케이터on
+
+            $('.btn-top').click(function () {
+                $('html, body').animate({
+                    scrollTop: 0
+                }, 600)
+            }) //위로가기 버튼
+        })
+    </script>
+</body>
+
+</html>

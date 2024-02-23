@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="ok.html" name="myForm" onsubmit="return check()" method="post">
+        <input type="text" name="id" placeholder="아이디">
+        <input type="password" name="pw1" placeholder="비밀번호">
+        <input type="password" name="pw2" placeholder="비밀번호확인">
+        <button type="submit">로그인</button>
+    </form>
+
+    <script>
+        const f = document.myForm;
+        function check(){
+
+            console.log(f.id.value); // 입력된 값
+            console.log(f.id.value.length); // 입력된 값의 길이
+
+            console.log(f.id.value == ""); // 문자열값이 없느냐? 
+            console.log(f.id.value.length == 0); // 문자열 길이가 0이냐? 
+
+            if( f.id.value == "" ){ 
+                alert('아이디 입력해라!'); 
+                f.id.focus();
+                return false;
+            }
+            if( f.pw1.value == "" ){ alert('비밀번호 입력해라!'); return false;}
+            if( f.pw2.value == "" ){ alert('아이디 확인해라!'); return false;}
+            if( f.pw1.value != f.pw2.value ){
+                alert('비밀번호가 서로 다릅니다');
+                f.pw1.focus(); // 커서가 이동
+                f.pw1.select(); // 값을 선택한 상태로 블럭이 씌워지는
+                return false;
+            }
+            return true;
+            
+        }
+        
+
+    </script>
+
+</body>
+</html>

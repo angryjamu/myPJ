@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <style>
+        .faq_list{}
+        .faq_list .answer{background-color: aqua; height: 200px;}
+        .faq_list .answer.fold{display: none;}
+    </style>
+</head>
+<body>
+    <div class="faq_list">
+        <ul>
+            <li>
+                <div class="question">질문1111</div>
+                <div class="answer fold">답변111</div>
+            </li>
+            <li>
+                <div class="question">질문22</div>
+                <div class="answer fold">답변22</div>
+            </li>
+            <li>
+                <div class="question">질문333</div>
+                <div class="answer fold">답변333</div>
+            </li>
+        </ul>
+    </div>
+    <script>
+        $(function(){
+            $('.faq_list .question').click(function(){
+            
+                if( $(this).next('.answer').hasClass('fold') ){
+                    $(this).next().removeClass('fold');
+                }else{
+                    $(this).next().addClass('fold');
+                }
+
+            })
+        })
+    </script>    
+</body>
+</html>

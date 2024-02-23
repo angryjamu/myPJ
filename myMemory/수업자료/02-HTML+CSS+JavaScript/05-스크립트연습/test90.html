@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <style>
+        /* 초기화 */
+        body,ul{margin: 0; padding: 0;}
+        ul{list-style: none;}
+        a{text-decoration: none; color: #000;}
+        button{border: 0; cursor: pointer;}
+
+        .util{}
+        .util .container{width: 1400px; margin: 0 auto;}
+        .util .container::after{content: ""; display: block; clear: both;}
+        .util .container .family{float: left;}
+        .util .container .right{float: right;}
+        .util .container .right .link{float: left;}
+        .util .container .right .login{float: left;}
+        .util .container .right .lang{float: left; position: relative;}
+        .util .container .right .lang button{height: 40px;}
+        .util .container .right .lang button.on{}
+        .util .container .right .lang ul{
+            position: absolute; left: 0; top: 0;
+            transform: translateY(40px);
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="util">
+        <div class="container">
+            <div class=family">관계사링크들</div>
+            <div class="right">
+                <div class="link">링크들</div>
+                <div class="login">로그인관련내용</div>
+                <div class="lang">
+                    <button type="button">언어선택</button>
+                    <ul>
+                        <li>
+                            <a href="#">KOR</a>
+                        </li>
+                        <li>
+                            <a href="#">ENG</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(function(){
+            $('.lang button').click(function(){
+                if($(this).next().is(':hidden')){
+                    $(this).next().slideDown(300)
+                }else{
+                    $(this).next().fadeOut(200)
+                }
+            })
+        })
+
+    </script>
+
+</body>
+</html>

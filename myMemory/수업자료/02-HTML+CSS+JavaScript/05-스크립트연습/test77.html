@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 초기화 */
+        body,ul{margin: 0; padding: 0;}
+        ul{list-style: none;}
+        a{text-decoration: none; color: #000;}
+        
+        /* 레이아웃 */
+        .tab_wrap{}
+        .tab_wrap .tab_btn{}
+        .tab_wrap .tab_btn .btn{}
+        .tab_wrap .tab_btn .btn.active{background-color: aqua;}
+        .tab_wrap .tab_con{}
+        .tab_wrap .tab_con .con{display: none;}
+        .tab_wrap .tab_con .con.active{display: block;}
+
+    </style>
+
+</head>
+<body>
+    <div class="tab_wrap">
+        <div class="tab_btn">
+            <button class="btn active" data-tabcon="con1">탭메뉴1</button>
+            <button class="btn" data-tabcon="con2">탭메뉴2</button>
+            <button class="btn" data-tabcon="con3">탭메뉴3</button>
+        </div>
+        <div class="tab_con">
+            <div id="con1" class="con active">탭내용1111</div>
+            <div id="con2" class="con">탭내용2222</div>
+            <div id="con3" class="con">탭내용33333</div>
+        </div>
+    </div>
+    <script>
+        const tabLinks = document.querySelectorAll('.tab_btn .btn')
+        const tabConts = document.querySelectorAll('.tab_con .con')
+
+        console.log( tabLinks , tabConts )
+
+        tabLinks.forEach(function(el, idx){
+            el.addEventListener('click' , openTabs)
+        })//forEach문의 끝부분
+        
+        function openTabs(el){
+            console.log('함수가 호출되었습니다')
+            console.log(el)
+            console.log(el.currentTarget)
+        
+            const btnTarget = el.currentTarget
+            const activeTabCon = btnTarget.dataset.tabcon
+
+            console.log(activeTabCon)
+
+            tabLinks.forEach(function(el){
+                el.classList.remove('active')
+            })
+
+            tabConts.forEach(function(el){
+                el.classList.remove('active')
+            })
+
+            btnTarget.classList.add('active')
+            
+            document.querySelector( '#' + activeTabCon ).classList.add('active')
+
+
+            
+        }
+
+
+
+        
+    </script>
+</body>
+</html>

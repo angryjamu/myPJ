@@ -1,0 +1,16 @@
+@charset "utf-8";
+.topSearch .inpArea input[type=text]{
+    border: 1px solid #000;
+    width: 600px;
+    height: 60px;
+    border-radius: 30px;
+    padding: 0 20px;
+}
+.topSearch .inpArea button[type=button]{
+    background: #fafafa;
+    border-color: saddlebrown;
+    width: 80px;
+    height: 40px;
+    font-weight: bold;
+    border-radius: 30px;
+}

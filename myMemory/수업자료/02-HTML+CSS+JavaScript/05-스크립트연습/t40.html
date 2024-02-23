@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="txt" onclick="change()">클릭!</p>
+    <button id="btn" onclick="changeColor()">버튼</button>
+    <script>
+        function changeColor() {
+            var BTN=document.getElementById('btn');
+            BTN.style.color='orange';
+        }
+
+        function change() {
+            var TXT=document.getElementById('txt');
+            TXT.innerHTML='<strong>개롭게입력된<br>텍스트입니다.</strong>';
+        }
+        //change();
+    </script>
+</body>
+</html>

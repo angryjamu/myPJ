@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="firstP">첫번째 문장입니다.</p>
+    <p class="title">문장입니다.</p>
+    <p class="thirdP">세번째 문장입니다.</p>
+    <span>텍스트 범위입니다.</span>
+    <strong class="title">텍스트 범위입니다.</strong>
+    <a href="#">텍스트 범위입니다.</a>
+    <a href="#">텍스트 범위입니다.</a>
+    <a href="#">텍스트 범위입니다.</a>
+    <a href="#">텍스트 범위입니다.</a>
+    <a href="#">텍스트 범위입니다.</a>
+
+    <ul>
+        <li class="item">아이템1번</li>
+        <li class="item">아이템2번</li>
+        <li class="item">아이템3번</li>
+    </ul>
+
+    <script>
+        var p=document.getElementById('firstP');
+        var t1=document.getElementsByClassName('title');
+        var i=document.getElementsByClassName('item');
+        var link=document.getElementsByTagName('a');
+        var tit=document.querySelector('.thirdP');
+
+        p.style.color='red';
+        p.style.backgroundColor='cyan';
+        p.style.fontSize='30px';
+        p.style.margin='0';
+        p.style.float='right';
+        
+        t1[1].style.backgroundColor='cyan';
+        link[3].style.backgroundColor='black';
+
+        tit.style.color='yellow';
+        
+        console.log(p);
+        console.log(t1);
+        console.log(i);
+        console.log(link);
+        console.log(tit);
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+.cont{
+    outline: 1px solid olive;
+}
+.cont .box1 {
+    background-color: cadetblue;
+    float: left;
+    height: 200px;
+}
+
+.cont .box2 {
+    background-color: navajowhite;
+    float: left;
+    height: 300px;
+}
+.box3 {
+    background-color: hotpink;
+}
+.cont::after{
+    content: '';
+    display: block;
+    clear: both;
+}

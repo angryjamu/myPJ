@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        /* 초기화 */
+        body,h4{margin: 0; padding: 0;}
+        table{border-collapse: collapse;}
+        button{cursor: pointer;}
+
+        /* 레이아웃 */
+        .btn{width: 100%; padding: 20px; text-align: left;}
+        .btn.on{background-color: blue;}
+
+        #box1{}
+
+        .box.fold{display: none;}
+
+        .tableType01{width: 100%; border-top: 1px solid orange; border-bottom: 1px solid purple;}
+        .tableType01 th{padding: 25px 12px;}
+        .tableType01 td{padding: 25px; text-align: center;}
+        .tableType01 thead th{border-bottom: 1px solid green;}
+        .tableType01 th[scope="row"]{border-right: 1px solid red;}
+        .tableType01 tbody tr:nth-child(1) th,
+        .tableType01 tbody tr:nth-child(1) td{border-bottom: 1px solid blue;}
+    </style>
+</head>
+<body>
+    <h4>영양정보</h4>
+    <button type="button" class="btn1 btn">영양정보 보기</button>
+    <div id="box1" class="box fold">
+        <table class="tableType01">
+            <caption>영양정보 - 영양소별 함량, 영양소기준치 정보표</caption>
+            <thead>
+                <tr>
+                    <th scope="row">영양소</th>
+                    <th scope="col">중량(g)</th>
+                    <th scope="col">중량(ml)</th>
+                    <th scope="col">열량</th>
+                    <th scope="col">당</th>
+                    <th scope="col">단백질</th>
+                    <th scope="col">포화지방</th>
+                    <th scope="col">나트륨</th>
+                    <th scope="col">카페인</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">함량</th>
+                    <td>222g</td>
+                    <td>-</td>
+                    <td>529kcal</td>
+                    <td>24g</td>
+                    <td>7g</td>
+                    <td>1208mg</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <th scope="row">영양소기준치</th>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>14%</td>
+                    <td>44%</td>
+                    <td>47%</td>
+                    <td>60%</td>
+                    <td>-</td>
+                </tr>
+            </tbody>    
+        </table>
+    </div>
+    <h4>알레르기정보</h4>
+    <button type="button" class="btn2 btn">알레르기정보 보기</button>
+    <div id="box2" class="box fold">알레르기정보내용을 작성하세요</div>
+
+    <!-- 제이쿼리 작성 -->
+    <script>
+        $(document).ready(function(){
+            $('.btn').click(function(){ // .btn1 을 클릭할때
+
+                $(this).toggleClass('on');
+
+                // 클릭한 버튼의 관계를 따져 다음요소에 'fold'클래스를 가지고 있으면
+                if($(this).next().hasClass('fold')){ 
+                    // fold 클래스를 제거
+                    $(this).next().removeClass('fold');    
+                }else{
+                    // fold 클래스를 추가
+                    $(this).next().addClass('fold'); 
+                }
+            })
+        });
+    </script>
+</body>
+</html>

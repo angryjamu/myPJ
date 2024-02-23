@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .fntSize{font-size: 60px;}
+        .bgColor{background-color: lime;}
+    </style>
+</head>
+<body>
+    <h1 id="title">제목 1단계입니다.</h1>
+    <h2 id="sub-title">제목 2단계입니다.</h2>
+    
+    <script>
+        const tit = document.getElementById('title');
+
+        tit.classList.add('bgColor' ,'fontSize');
+        tit.classList.remove('bgColor');
+
+        const subTitle = document.getElementById('sub-title');
+
+        subTitle.style.backgroundColor = 'skyblue';
+        subTitle.style.fontSize = '20px';
+
+    </script>
+</body>
+</html>

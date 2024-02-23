@@ -1,0 +1,26 @@
+@charset "utf-8";
+html,body,nav,ul,li,a{
+    margin: 0;
+    padding: 0;
+}
+ul,li,a{
+    list-style: none;
+    text-decoration: none;
+    color: #000;
+}
+.hMenu>.depth1>li{
+    float: left;
+    padding: 20px;
+}
+.hMenu>.depth1>li>a{
+    font-weight: bold;
+    font-size: 20px;
+}
+.hMenu>.depth1>li>a:hover{
+    color: #996;
+    text-decoration: underline;
+}
+.depth2>li>a:hover{
+    color: #090;
+    text-decoration: underline;
+}
