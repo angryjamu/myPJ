@@ -5,5 +5,6 @@
 body{font-family: 'Pretendard'; font-weight: 400;}
 ul,li{list-style: none;}
 a{text-decoration: none; color: inherit;}
+em{font-style: normal;}
 img{vertical-align: top;}
 button{background: transparent; border: none; cursor: pointer;}

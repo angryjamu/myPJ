@@ -26,5 +26,6 @@
 #judge_wrap{padding: 125px 15px 62px;}
 #judge_wrap .inner{max-width: 1100px; margin: 0 auto; text-align: center;}
 #judge_wrap h2{font-size: 35px; margin-bottom: 2px; font-family: 'GmarketSans';}
-#judge_wrap p{}
-
+#judge_wrap h2 em{font-family: GmarketSans; color: #e51688;}
+#judge_wrap p{font-size: 20px; margin-top: 10px; margin-bottom: 30px;}
+#judge_wrap .judge_swiper img{width: 100%;}
