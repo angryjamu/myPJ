@@ -1219,7 +1219,21 @@ small {
         margin-bottom: 20px;
     }
 
+    #header .global .outer .menu-bottom {
+        padding-top: 35px;
+    }
 
+    #header .global .outer .menu-bottom .menu li .kr {
+        font-size: 14px;
+    }
+
+    #header .global .outer .menu-bottom .menu-lang .lang > li > a {
+        font-size: 14px;
+    }
+
+    #header .global .outer .menu-bottom .menu-lang .lang > span {
+        font-size: 14px;
+    }
 
     .top-wrapper .first-section {
         padding: 70px 0 0;
