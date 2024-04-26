@@ -26,7 +26,8 @@
 #header .logo {
     width: 66px;
     text-align: center;
-    transition: opacity .4s;
+    transition: .4s;
+    z-index: 100;
 }
 
 #header .logo:hover {
@@ -41,6 +42,13 @@
 
 #header .logo.sp {
     display: none;
+}
+
+#header .logo.sp > a {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #header .menu-box {
@@ -838,6 +846,18 @@ small {
         font-size: 17px;
     }
 
+    #header .logo.pc {
+        display: none;
+    }
+    
+    #header .logo.sp {
+        display: block;
+    }
+
+    #header .logo.sp > a img {
+        width: 94px;
+    }
+    
     #header .nav-box .counsel {
         font-size: 28px;
         margin-top: -1px;
@@ -846,6 +866,14 @@ small {
     #header .nav-box .lang {
         font-size: 28px;
         position: initial;
+    }
+
+    #header .global .outer .menu-bottom .menu-lang .lang > li > a {
+        font-size: 17px;
+    }
+
+    #header .global .outer .menu-bottom .menu-lang .lang > span {
+        font-size: 17px;
     }
 
     #header .menu-box {
