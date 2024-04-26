@@ -1169,8 +1169,16 @@ small {
     }
 
     #header .btn-menu {
-        width: 32px;
+        width: 25px;
         height: 6px;
+    }
+
+    #header .hidden-input:checked ~ .btn-menu::before {
+        top: 34%;
+    }
+
+    #header .hidden-input:checked ~ .btn-menu::after {
+        bottom: 32%;
     }
 
     #header .global .outer-wrapper {
