@@ -1140,6 +1140,7 @@ small {
     }
 
     #header .global .outer .menu-bottom .menu-lang .lang {
+        align-items: baseline;
         justify-content: flex-start;
     }
 }
