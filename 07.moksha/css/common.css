@@ -1170,12 +1170,12 @@ small {
     }
 
     #header .btn-menu {
-        width: 25px;
+        width: 32px;
         height: 6px;
     }
 
     #header .hidden-input:checked ~ .btn-menu::before {
-        top: 34%;
+        top: 30%;
     }
 
     #header .hidden-input:checked ~ .btn-menu::after {
