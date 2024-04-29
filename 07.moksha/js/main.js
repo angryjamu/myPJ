@@ -14,7 +14,7 @@ var swiper = new Swiper(".swiper-fade", {
 
   window.addEventListener('scroll', function() {
     // 스크롤한 높이가 300px를 초과하면 배경색 변경
-    if (window.scrollY > 7300) {
+    if (window.scrollY > 7310) {
         // 배경색 변경
         document.body.style.backgroundColor = '#302833';
         // #header와 #footer에 filter 속성 적용
