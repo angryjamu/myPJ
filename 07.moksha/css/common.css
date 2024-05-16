@@ -492,6 +492,7 @@
 
 .top-wrapper .third-section .description-img-box2 .left-box .picture {
     width: 100%;
+    transform: translate3d(10px, -55px, 10px);
 }
 
 .top-wrapper .third-section .description-img-box2 .right-box {
