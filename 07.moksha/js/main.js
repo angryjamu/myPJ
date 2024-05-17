@@ -13,23 +13,11 @@ var swiper = new Swiper(".swiper-fade", {
   });
 
   window.addEventListener('scroll', function() {
-    let scrollThreshold;
-    
-    if (window.innerWidth < 768) {
-        // 모바일 디바이스 기준
-        scrollThreshold = 5000; // 모바일에 맞춘 값으로 설정
-    } else {
-        // 데스크탑 디바이스 기준
-        scrollThreshold = 7310;
-    }
+    let scrollThreshold = window.innerWidth < 768 ? 5000 : 7310;
 
     if (window.scrollY > scrollThreshold) {
-        document.body.style.backgroundColor = '#302833';
-        document.getElementById('header').style.filter = 'invert(100%)';
-        document.getElementById('footer').style.filter = 'invert(100%)';
+        document.body.classList.add('scrolled');
     } else {
-        document.body.style.backgroundColor = '';
-        document.getElementById('header').style.filter = 'none';
-        document.getElementById('footer').style.filter = 'none';
+        document.body.classList.remove('scrolled');
     }
 });
