@@ -13,7 +13,7 @@ var swiper = new Swiper(".swiper-fade", {
   });
 
   window.addEventListener('scroll', function() {
-    let scrollThreshold = window.innerWidth < 768 ? 5000 : 7310;
+    let scrollThreshold = window.innerWidth < 768 ? 5300 : 7310;
 
     if (window.scrollY > scrollThreshold) {
         document.body.classList.add('scrolled');
