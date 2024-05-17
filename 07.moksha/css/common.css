@@ -492,7 +492,7 @@
 
 .top-wrapper .third-section .description-img-box2 .left-box .picture {
     width: 100%;
-    transform: translate3d(0px, -55px, 0px);
+    transform: translate(0px, -55px);
 }
 
 .top-wrapper .third-section .description-img-box2 .right-box {
@@ -1325,7 +1325,7 @@ small {
     }
 
     .top-wrapper .third-section .description-img-box1 .vertical-title-box .subtitle-box .border::before {
-        margin: 0 18px;
+        margin: 0 18px 0;
     }
 
     .top-wrapper .third-section .description-img-box1 .vertical-title-box .subtitle-box .sub {
