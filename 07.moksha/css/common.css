@@ -150,6 +150,8 @@
     pointer-events: initial;
     display: flex;
     transition: all .4s;
+    font-family: "Nanum Myeongjo", serif;
+    font-weight: normal;
 }
 
 #header .global .outer-wrapper {
@@ -254,6 +256,10 @@
 
 #header .global .outer .inner .menu-lang .lang > li > a {
     font-size: 14px;
+}
+
+#header .global .outer .inner .menu-lang .lang > li > .en {
+    color: #808080;
 }
 
 #header .global .outer .inner .menu-lang .lang > span {
