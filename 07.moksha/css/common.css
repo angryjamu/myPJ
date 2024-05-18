@@ -406,7 +406,7 @@
     translate: none;
     rotate: none;
     scale: none;
-    transform: translate(0px, -50px);
+    transform: translate(0, -50px);
 }
 
 .top-wrapper .third-section .description-img-box1 .left-box:hover {
@@ -1267,6 +1267,10 @@ small {
 
     #header .global .outer .menu-bottom .menu-lang .lang > span {
         font-size: 14px;
+    }
+
+    #header .global .outer .menu-bottom .menu-lang .lang > li > .en {
+        color: #808080;
     }
 
     .top-wrapper .first-section {
