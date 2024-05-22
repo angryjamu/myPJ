@@ -406,7 +406,6 @@
     translate: none;
     rotate: none;
     scale: none;
-    transform: translate(0, -30px);
 }
 
 .top-wrapper .third-section .description-img-box1 .left-box:hover {
