@@ -329,6 +329,14 @@
     transition: opacity 1s ease-in-out;
 }
 
+.top-wrapper .first-section img.l-img {
+    transform: translate(0px, -70px);
+}
+
+.top-wrapper .first-section img.l-img:last-child {
+    transform: translate(0px, 0px);
+}
+
 /* --------------------sec2-------------------- */
 .second-section {
     margin: 0 auto 289px;
