@@ -21,3 +21,6 @@ var swiper = new Swiper(".swiper-fade", {
         document.body.classList.remove('scrolled');
     }
 });
+
+// wowJS
+new WOW().init();
