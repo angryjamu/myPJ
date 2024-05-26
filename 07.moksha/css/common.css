@@ -329,12 +329,8 @@
     transition: opacity 1s ease-in-out;
 }
 
-.top-wrapper .first-section img.l-img {
+.top-wrapper .first-section .swiper-wrapper .swiper-slide img.l-img {
     transform: translate(0px, -70px);
-}
-
-.top-wrapper .first-section img.l-img:last-child {
-    transform: translate(0px, 0px);
 }
 
 /* --------------------sec2-------------------- */
