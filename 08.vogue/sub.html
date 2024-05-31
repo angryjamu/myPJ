@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,6 +17,7 @@
     <script src="https://cdn.jsdelivr.net/npm/axios@0.17.1/dist/axios.min.js"></script>
     <script src="js/sub.js"></script>
 </head>
+
 <body>
     <div id="top">
         <header class="top ibx">
@@ -105,7 +107,7 @@
                     </li>
                 </ul>
             </nav>
-            
+
             <a href="#" class="mobtn hbtn fi fi-nav-icon">
                 <span class="ir">GNB button</span>
             </a>
@@ -195,10 +197,10 @@
         </div>
 
     </div>
-    
+
     <div class="bgc" id="cont">
         <main class="cont ibx" v-for="(v,i) in items.data" v-if="v.경로===catName" v-bind:class="catName">
-             {{chgTit(v.제목)}}
+            {{chgTit(v.제목)}}
 
             <h2 class="stit">
                 {{v.제목}}
@@ -247,7 +249,8 @@
                 <img src="images/footer_logo.png" alt="하단로고">
             </div>
             <address class="addr">
-                WWW.VOGUE.COM Ⓒ CONDÉNAST ASIA PACIFIC. INC. ALL RIGHTS RESERVED. VOGUE.COM KOREA IS OPERATED BY DOOSAN MAGAZINE.
+                WWW.VOGUE.COM Ⓒ CONDÉNAST ASIA PACIFIC. INC. ALL RIGHTS RESERVED. VOGUE.COM KOREA IS OPERATED BY DOOSAN
+                MAGAZINE.
             </address>
             <ul class="blink">
                 <li>
@@ -265,10 +268,11 @@
             </ul>
         </footer>
     </div>
-    
+
     <a href="#" class="tbtn fi fi-angle-up">
         <span class="ir">위로가기버튼</span>
     </a>
-    
+
 </body>
+
 </html>
