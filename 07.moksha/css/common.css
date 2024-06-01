@@ -757,12 +757,57 @@ small {
     margin-right: 162px;
 }
 
-.concept .concept-section .first-section-texts .left-box .text, .concept .concept-section .first-section-texts .left-box .description {
-    
+.concept-section .first-section-texts .left-box .text, .concept-section .first-section-texts .left-box .description {
+    height: 250px;
+    font-size: 15px;
+    letter-spacing: 2px;
+    line-height: 1.6;
+    margin-left: 3px;
+    text-align: justify;
+    writing-mode: vertical-rl;
 }
 
-.concept .concept-section .first-section-texts .left-box .text:first-child, .concept .concept-section .first-section-texts .left-box .description:first-child {
+.concept-section .first-section-texts .left-box .text:first-child, .concept-section .first-section-texts .left-box .description:first-child {
     margin-left: 0;
+}
+
+.concept-section .first-section-texts .left-box .text {
+    height: 260px;
+    line-height: 1.6;
+}
+
+.concept-section .first-section-texts .left-box .border::before {
+    content: '';
+    display: block;
+    border-left: 1px solid #000;
+    width: 1px;
+    height: 30px;
+    margin: 6px 40px 0;
+}
+
+.concept-section .first-section-texts .left-box .description-box.pc {
+    display: flex;
+}
+
+.concept-section .first-section-texts .left-box .description-box {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-right: 37px;
+}
+
+.concept-section .first-section-texts .left-box .text.sp, .concept-section .first-section-texts .left-box .description.sp {
+    display: none;
+}
+
+.concept-section .first-section-texts .left-box .title {
+    font-size: 28px;
+    letter-spacing: 2px;
+    writing-mode: vertical-rl;
+}
+
+.concept-section .first-section-texts .left-box .sub-title-sp {
+    display: none;
 }
 
 /* --------------------media-------------------- */
