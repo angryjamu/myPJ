@@ -738,6 +738,10 @@ small {
 }
 
 /* --------------------concept-------------------- */
+.concept-section  {
+    font-family: "Nanum Myeongjo", serif;
+}
+
 .concept-section .first-section-texts {
     width: 100%;
     max-width: 1000px;
@@ -809,6 +813,127 @@ small {
 .concept-section .first-section-texts .left-box .sub-title-sp {
     display: none;
 }
+
+.concept-section .first-section-texts .right-box {
+    position: relative;
+    width: 30%;
+    height: 350px;
+    flex-shrink: 0;
+}
+
+.first-section-texts .right-box .sub-title {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 15px;
+    letter-spacing: 2px;
+    position: absolute;
+    left: 0;
+    top: 80px;
+}
+
+.concept-section .first-section-texts .right-box .sub-title {
+    font-weight: 600;
+    top: -58px;
+}
+
+.concept-section .second-section {
+    margin-top: 288px;
+}
+
+.concept-section .second-section .description-img-box4 {
+    max-width: 840px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.concept-section .second-section .description-img-box4 .left-box {
+    width: 840px;
+    aspect-ratio: 840 / 560;
+    margin-bottom: 80px;
+    overflow: hidden;
+}
+
+.concept-section .second-section .description-img-box4 .left-box .picture {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.concept-section .second-section .description-img-box4 .right-box {
+    width: 100%;
+    height: 100%;
+    padding: 0 90px 240px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+.concept-section .second-section .description-img-box4 .right-box .text-box {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.concept-section .second-section .description-img-box4 .right-box .text-box .text {
+    font-size: 15px;
+    height: 321px;
+    line-height: 1.7;
+    letter-spacing: 1px;
+    text-align: justify;
+    /* writing-mode: vertical-rl; */
+}
+
+.concept-section .second-section .description-img-box4 .right-box .text-box .text.pc {
+    display: block;
+}
+
+.concept-section .second-section .description-img-box4 .right-box .text-box .text.sp {
+    display: none;
+}
+
+.vertical-title-wrapper {
+    max-width: 840px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    margin: 0 auto;
+}
+
+.concept-section .second-section .description-img-box4 .right-box .vertical-title-wrapper {
+    margin: 0 0 0 82px;
+    min-height: 321px;
+}
+
+.concept-section .second-section .description-img-box4 .right-box.land .vertical-title-wrapper {
+    margin: 0 0 0 82px;
+    min-height: 321px;
+}
+
+.vertical-title-wrapper .en {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 13px;
+    writing-mode: vertical-rl;
+}
+
+.vertical-title-wrapper .border::before {
+    content: '';
+    display: block;
+    border-left: 1px solid #000;
+    width: 1px;
+    height: 30px;
+    margin: 0 20px;
+}
+
+.vertical-title-wrapper .kr {
+    font-size: 24px;
+    line-height: 1;
+    margin-top: -2px;
+    writing-mode: vertical-rl;
+}
+
+
 
 /* --------------------media-------------------- */
 @media screen and (min-width: 1441px) {
