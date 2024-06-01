@@ -737,6 +737,34 @@ small {
     height: auto;
 }
 
+/* --------------------concept-------------------- */
+.concept-section .first-section-texts {
+    width: 100%;
+    max-width: 1000px;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 0 190px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.concept-section .first-section-texts .left-box {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-right: 162px;
+}
+
+.concept .concept-section .first-section-texts .left-box .text, .concept .concept-section .first-section-texts .left-box .description {
+    
+}
+
+.concept .concept-section .first-section-texts .left-box .text:first-child, .concept .concept-section .first-section-texts .left-box .description:first-child {
+    margin-left: 0;
+}
+
 /* --------------------media-------------------- */
 @media screen and (min-width: 1441px) {
     #footer .footer-wrapper .left-box.kr {
