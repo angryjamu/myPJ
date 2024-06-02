@@ -1004,6 +1004,10 @@ small {
     line-height: 1.6;
 }
 
+.concept-section .second-section .right-box .text-box .text.sp {
+    display: none;
+}
+
 /* --------------------media-------------------- */
 @media screen and (min-width: 1441px) {
     #footer .footer-wrapper .left-box.kr {
@@ -1500,6 +1504,14 @@ small {
         font-size: 28px;
         letter-spacing: 1px;
         writing-mode: horizontal-tb;
+    }
+
+    .concept-section .second-section .right-box .text-box .text.sp {
+        display: block;
+    }
+
+    .concept-section .second-section .right-box .text-box .text {
+        display: none;
     }
 }
 
