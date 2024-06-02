@@ -458,7 +458,7 @@
     display: block;
     width: 1px;
     height: 30px;
-    border-right: 1px solid #000;
+    border-left: 1px solid #000;
     margin: 0 40px;
 }
 
@@ -475,7 +475,7 @@
     line-height: 1;
     letter-spacing: 10px;
     writing-mode: vertical-rl;
-    margin-right: 40px;
+    margin-left: 40px;
 }
 
 .top-wrapper .third-section .description-img-box2 {
