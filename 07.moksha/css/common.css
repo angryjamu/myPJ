@@ -761,7 +761,7 @@ small {
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    margin-right: 162px;
+    /* margin-right: 162px; */
 }
 
 .concept-section .first-section-texts .left-box .text, .concept-section .first-section-texts .left-box .description {
@@ -771,7 +771,7 @@ small {
     line-height: 1.6;
     margin-left: 3px;
     text-align: justify;
-    writing-mode: vertical-rl;
+    /* writing-mode: vertical-rl; */
 }
 
 .concept-section .first-section-texts .left-box .text:first-child, .concept-section .first-section-texts .left-box .description:first-child {
@@ -793,7 +793,8 @@ small {
 }
 
 .concept-section .first-section-texts .left-box .description-box.pc {
-    display: flex;
+    /* display: flex; */
+    display: none;
 }
 
 .concept-section .first-section-texts .left-box .description-box {
