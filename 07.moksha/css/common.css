@@ -1614,6 +1614,14 @@ small {
         align-items: baseline;
         justify-content: flex-start;
     }
+
+    .concept-section .first-section-texts {
+        padding: 220px 125px 0;
+    }
+
+    .concept-section .second-section .description-img-box4 .right-box {
+        padding: 0 30px 220px;
+    }
 }
 
 @media screen and (max-width: 650px) {
@@ -1873,5 +1881,92 @@ small {
         margin-top: 39px;
     }
 
+    .concept-section .first-section-texts {
+        height: 100vh;
+        padding: 0px 78px 0;
+        margin-bottom: 150px;
+    }    
+
+    .concept-section .first-section-texts .left-box .text, .concept-section .first-section-texts .left-box .description {
+        font-size: 14px;
+    }
+
+    .concept-section .first-section-texts .left-box .border {
+        display: none;
+    }
+
+    .concept-section .first-section-texts .left-box .text.sp, .concept-section .first-section-texts .left-box .description.sp {
+        margin-bottom: 18px;
+    }
+
+    .concept-section .first-section-texts .left-box .title {
+        font-size: 19px;
+        margin-bottom: 103px;
+    }
+
+    .concept-section .first-section-texts .left-box .sub-title-sp {
+        font-size: 14px;
+    }
+
+    .concept-section .second-section {
+        margin: 150px auto;
+    }
+
+    .concept-section .second-section .content-out-wrapper {
+        padding: 0 42px;
+    }
+
+    .concept-section .second-section .description-img-box4 .right-box {
+        padding: 0 25px 110px;
+    }
+
+    .concept-section .second-section .description-img-box4 .right-box.land .vertical-title-wrapper {
+        min-height: 154px;
+        font-size: 14px;
+        margin: 0px 0 73px auto;
+    }
+
+    .concept-section .second-section .description-img-box4 .right-box .text-box .text {
+        font-size: 14px;
+        margin-bottom: 25px;
+    }
+
+    .vertical-title-wrapper .en {
+        font-size: 12px;
+    }
+
+    .vertical-title-wrapper .kr {
+        font-size: 17px;
+        letter-spacing: 0px;
+        margin-top: 0px;
+    }
+
+    .concept-section .second-section .content-wrapper.future {
+        padding-bottom: 110px;
+    }
+
+    .content-box .left-box {
+        margin-bottom: 39px;
+    }
+
+    .content-box .right-box {
+        padding: 0 25px;
+    }
+
+    .content-box .right-box .title-box {
+        margin-bottom: 64px;
+    }
+
     
+    .concept-section .second-section .content-wrapper.future .vertical-title-wrapper {
+        min-height: 158px;
+    }
+
+    .content-box .right-box .title-box .sub-title {
+        font-size: 14px;
+    }
+
+    .content-box .right-box .text-box {
+        font-size: 14px;
+    }
 }
