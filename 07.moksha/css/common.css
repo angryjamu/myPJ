@@ -1074,6 +1074,8 @@ small {
     .top-wrapper .third-section .button-box {
         width: 100%;
         margin-top: initial;
+        display: flex;
+        flex-direction: row-reverse;
     }
 
     .top-wrapper .third-section .description-img-box2 {
