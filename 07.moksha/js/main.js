@@ -5,11 +5,7 @@ var swiper = new Swiper(".swiper-fade", {
     speed: 1700,
     autoplay: {
         delay: 5000,
-      },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
+      }
   });
 
   window.addEventListener('scroll', function() {
