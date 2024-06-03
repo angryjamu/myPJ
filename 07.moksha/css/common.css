@@ -1520,7 +1520,7 @@ small {
     body.scrolled {
         background-color: #302833;
     }
-    body.scrolled #header,
+    /* body.scrolled #header, */
     body.scrolled #footer {
         filter: invert(100%);
     }
