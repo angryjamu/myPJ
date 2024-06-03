@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        header {
+            font-size: 80px;
+        }
+
+        main {
+            height: 400vh;
+            font-size: 80px;
+            background-color: lavender;
+        }
+
+        footer {
+            font-size: 80px;
+        }
+
+        .quick {
+            background-color: aqua;
+            position: fixed;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 200px;
+            height: 600px;
+            transition: right .6s;
+        }
+
+        .quick.close {
+            right: -200px;
+        }
+
+        .btn-quick {
+            position: absolute;
+            left: -60px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 60px;
+            height: 40px;
+
+        }
+
+        .btn-help {
+            position: fixed;
+            right: 30px;
+            bottom: 100px;
+            opacity: 0;
+            transition: opacity .3s;
+        }
+
+        .btn-help.show {
+            opacity: 1;
+        }
+
+        .btn-top {
+            position: fixed;
+            right: 30px;
+            bottom: 30px;
+            opacity: 0;
+            transition: opacity .3s;
+        }
+
+        .btn-top.show {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="quick">퀵메뉴
+        <button type="button" class="btn-quick">퀵메뉴닫기</button>
+    </div>
+    <header>헤더영역</header>
+    <main>메인영역</main>
+    <footer>풋터영역</footer>
+    <button type="button" class="btn-help">채팅상담</button>
+    <button type="button" class="btn-top">맨위로</button>
+
+
+    <script>
+        $(function () {
+            $('.btn-quick').click(function () {
+                $('.quick').toggleClass('close')
+
+
+                if ($(this).text() == '퀵메뉴닫기') {
+                    $(this).text('퀵메뉴열기')
+                } else {
+                    $(this).text('퀵메뉴닫기')
+                }
+            }) //퀵버튼
+
+            $(window).scroll(function () {
+                let winScrollT = $(window).scrollTop()
+
+                if (winScrollT <= 0) {
+                    $('.btn-help,.btn-top').removeClass('show')
+                } else {
+                    $('.btn-help,.btn-top').addClass('show')
+                }
+            }) // 윈도우 스크롤하면 버튼show
+
+            $('.btn-top').click(function () {
+                $('html').animate({
+                    scrollTop: 0
+                }, 600)
+            }) //위로가기 버튼
+
+            $(window).resize(function () {
+                let winWidth = $(window).width()
+
+                if (winWidth <= 1600) {
+                    $('.quick').addClass('close')
+                    $(this).text('퀵메뉴열기')
+                } else {
+                    $('.quick').removeClass('close')
+                    $(this).text('퀵메뉴닫기')
+                }
+            }) //창크기 줄이면 퀵메뉴 닫힘
+
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>드롭다운메뉴</title>
+    <style>
+        body {
+            background-color: #000;
+        }
+
+        nav {
+            overflow: hidden;
+            background-color: darkblue;
+        }
+
+        nav a {
+            float: left;
+            font-size: 16px;
+            padding: 14px 16px;
+            color: dodgerblue;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+        .dropdown .btnDrop {
+            font-size: 16px;
+            color: dodgerblue;
+            padding: 14px 16px;
+            margin: 0;
+            background-color: inherit;
+            border: none;
+            outline: none;
+        }
+
+        nav a:hover,
+        .dropdown:hover .btnDrop {
+            background-color: blue;
+            cursor: pointer;
+        }
+
+        .menuDrop {
+            display: none;
+            position: absolute;
+            background-color: darkcyan;
+            min-width: 160px;
+            box-shadow: 0 0 16px 0 rgba(255, 255, 255, 0.7);
+            z-index: 1;
+        }
+
+        .menuDrop a {
+            float: none;
+            display: block;
+            color: #fafafa;
+            padding: 12px 16px;
+            text-align: left;
+        }
+
+        .menuDrop a:hover {
+            background-color: cyan;
+            color: #000;
+        }
+
+        .show {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="#">Home</a>
+            <div class="dropdown">
+                <p class="btnDrop" onclick="showMenu(this)">News</p>
+                <div class="menuDrop">
+                    <a href="#">뉴스링크1</a>
+                    <a href="#">뉴스링크2</a>
+                    <a href="#">뉴스링크3</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <p class="btnDrop" onclick="showMenu(this)">DropDown</p>
+                <div class="menuDrop">
+                    <a href="http://127.0.0.1:5500/SampleSite.html">드롭다운링크1</a>
+                    <a href="#">드롭다운링크2</a>
+                    <a href="#">드롭다운링크3</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+</body>
+<script>
+    function showMenu(e) {
+        let menuDrop = e.nextElementSibling;
+        menuDrop.classList.toggle('show');
+    }
+    window.onclick = function (e) {
+        if (!e.target.matches('.btnDrop')) {
+            let menuDrops = document.getElementsByClassName('menuDrop');
+
+            for (let i = 0; i < menuDrops.length; i++){
+                menuDrops[i].classList.remove('show');
+            }
+        }
+    }
+</script>
+
+</html>

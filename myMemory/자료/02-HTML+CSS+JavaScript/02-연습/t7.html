@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h3{
+            margin: 0 auto;
+            padding: 0;
+        }
+        table,th,td{
+            border-collapse: collapse;
+        }
+        th{
+            border: 3px solid lightblue;
+            width: 80px;
+        }
+        td{
+            border: 3px solid lightgreen;
+            height: 60px;
+            text-align: center;
+            vertical-align: middle;
+        }
+        a{
+            text-decoration: none;
+        }
+        #day{
+            background-color: lightcyan;
+        }
+        #title{
+            background-color: lightblue;
+        }
+        .sold {
+            background-color: salmon;
+        }
+        .rev {
+            background-color: lightskyblue;
+        }
+    </style>
+</head>
+<body>
+    <h3>
+        버스예매
+    </h3>
+    <table>
+        <tr id="day">
+            <th colspan="4">서울대전2020.9.6수
+            </th>
+        </tr>
+        <tr id="title">
+            <th>출발
+            </th>
+            <th>버스회사
+            </th>
+            <th>등급
+            </th>
+            <th>예약가능
+            </th>
+        </tr>
+        <tr>
+            <td>11:50</td>
+            <td>한진고속</td>
+            <td>우등</td>
+            <td class="sold">매진</td>
+            </th>
+        </tr>
+        <tr>
+            <td>12:50</td>
+            <td>천일고속</td>
+            <td>고속</td>
+            <td class="rev"><a href="https://www.awwwards.com/websites/nominees/">예약하기</a></td>
+            </th>
+        </tr>
+        <tr>
+            <td>13:50</td>
+            <td>한진고속</td>
+            <td>우등</td>
+            <td class="sold">매진</td>
+            </th>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            position: absolute;
+            width: 100%;
+            background-color: lavender;
+            color: snow;
+            font-size: 80px;
+            padding: 20px 0 30px 0;
+            text-align: center;
+            transform: translateY(-100%);
+            transition: transform .6s;
+        }
+
+        header.scroll{
+            transform: translateY(0);
+        }
+        header.fixed{
+            position: fixed;
+        }
+        
+        /* header.scrollFix{
+            position: fixed;
+            animation: header 1s ease;
+        }
+
+        @keyframes header {
+            0%{opacity: 0;}
+            100%{opacity: 1;}
+        } */
+        
+        .sec {
+            border: 1px solid brown;
+            font-size: 80px;
+            height: 80vh;
+        }
+
+        .box{
+            position: fixed;
+            top: 100px;
+            right: 100px;
+            background-color: lawngreen;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>헤더영역</header>
+    <section class="sec sec-1">1번영역</section>
+    <section class="sec sec-2">2번영역</section>
+    <section class="sec sec-3">3번영역</section>
+    <footer>풋터영역</footer>
+    <button type="button" class="btn-top">위로</button>
+    <div class="box">값 출력</div>
+
+    <script>
+        $(function(){
+            $(window).scroll(function(){
+                let winScrollT = $(window).scrollTop()
+                let headerHeight = $('header').outerHeight()
+
+                /* if(winScrollT >= headerHeight ){
+                    $('header').addClass('scrollFix')
+                }else{
+                    $('header').removeClass('scrollFix')
+                } */ //헤더고정
+
+                if(winScrollT <= headerHeight ){
+                    $('header').removeClass('scroll')
+                }else{
+                    $('header').addClass('scroll fixed')
+                } //헤더고정
+                
+                $('.box').text(winScrollT)
+                
+            })
+            $('.btn-top').click(function () {
+                $('html, body').animate({
+                    scrollTop: 0
+                }, 600)
+            }) //위로가기 버튼
+
+        })
+    </script>
+</body>
+
+</html>

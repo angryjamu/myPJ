@@ -1,0 +1,316 @@
+@font-face {
+    font-family: 'S-CoreDream-3Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+body{
+    font-family: 'S-CoreDream-3Light';
+    background-color: #dff0f2;
+    line-height: 1.875;
+    font-size: 16px;
+}
+html,body,header,div,h1,h2,h3,h4,p,a,ul,li,ol,th,td{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    color: #707070;
+}
+em{
+    font-style: normal;
+}
+img{
+    vertical-align: middle;
+}
+table{
+    border-spacing: 0;
+}
+.inner{
+    width: 980px;
+    margin: 0 auto;
+    padding-top: 150px;
+}
+/* .header>.inner{
+    padding-top: 0;
+} */
+/* ----------------------헤더------------------------ */
+.header{
+    background-color: #61c5e1;
+}
+.in{
+    width: 980px;
+    margin: 0 auto;
+}
+.in::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.logo{
+    float: left;
+}
+.header .in .logo img{
+    vertical-align: -12px;
+}
+.gnb{
+    float: right;
+}
+.inner::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.tMenu::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.tMenu li{
+    float: left;
+    margin-left: 38px;
+}
+.tMenu li a{
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    display: block;
+    line-height: 60px;
+    font-size: 18px;
+    font-weight: 700;
+}
+/* ---------------------메인1------------------------- */
+.mainImg img{
+    width: 100%;
+}
+/* ---------------------메인2------------------------- */
+.logo2{
+    text-align: center;
+}
+.title{
+    text-align: center;
+    color: #61c5e1;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 2.7272;
+    margin: 100px 0 80px;
+    border-bottom: 3px solid #62c5e2;
+}
+.member{
+    width: 840px;
+    margin: 0 auto;
+}
+.member li{
+    float: left;
+    margin-right: 120px;
+}
+.member li:nth-child(3){
+    margin-right: 0;
+    margin-bottom: 60px;
+}
+.member li:nth-child(2){
+    margin-bottom: 60px;
+}
+.member li:nth-child(6){
+    margin-right: 0;
+}
+
+.member::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.name1>p{
+    display: inline;
+    font-weight: 700;
+    color: #242424;
+}
+.name1{
+    margin-top: 23px;
+    overflow: hidden;
+    border-bottom: 3px solid #62c5e2;
+}
+.info{
+    font-weight: 400;
+    line-height: 1.5;
+    white-space: nowrap;
+    margin-top: 20px;
+}
+.info em{
+    font-weight: 700;
+}
+.infoWrap a{
+    float: right;
+    margin-top: -2px;
+}
+/* -------------------앨범정보--------------------------- */
+.albumHeader,.albumCont{
+    width: 840px;
+    margin: 0 auto;
+}
+.albumimg{
+    float: left;
+}
+.tracklist{
+    float: right;
+    margin-right: 70px;
+}
+.albumdesc{
+    clear: both;
+}
+.albumtit{
+    font-family: 'S-CoreDream-3Light';
+    font-weight: 700;
+    color: #62c5e2;
+    margin-bottom: 23px;
+    padding-bottom: 9px;
+    border-bottom: 1px solid #62c5e2;
+}
+.list{
+    font-size: 14px;
+    font-family: 'S-CoreDream-3Light';
+    font-weight: 500;
+    line-height: 2.142;
+}
+.albumdesc p{
+    font-size: 18px;
+    font-family: 'S-CoreDream-3Light';
+    font-weight: 600;
+    color: #62c5e2;
+    line-height: 1.666;
+}
+.albumCont{
+    margin-top: 80px;
+}
+.albumCont p{
+    color: #707070;
+    font-family: 'S-CoreDream-3Light';
+    font-weight: 400;
+}
+/* ---------------------스케줄표------------------------- */
+.scheTbl th{
+    width: 140px;
+}
+.scheTbl thead tr:nth-child(1){
+    background-color: #78cde4;
+}
+.scheTbl thead tr:nth-child(1) th{
+    height: 60px;
+    color: #fff;
+}
+.scheTbl thead tr:nth-child(2) th{
+    height: 40px;
+}
+.scheTbl thead tr:nth-child(2) th{
+    border-bottom: 3px solid #78cde4;
+}
+.scheTbl tbody tr td{
+    height: 90px;
+    padding: 15px 0 0 20px;
+    vertical-align: top;
+    border-bottom: 1px solid #8c8c8c;
+}
+.scheTbl thead tr th:nth-child(1) .colored{
+    color: #ff2525;
+}
+
+/* ----------------------스케줄밑아이콘------------------------ */
+.iconwrap{
+    font-size: 0;
+    text-align: right;
+    margin-top: 32px;
+}
+.iconwrap span{
+display: inline-block;
+font-size: 16px;
+margin-left: 20px;
+}
+.iconwrap img{
+    vertical-align: -1px;
+}
+/* ----------------------노티스------------------------ */
+.noticeTbl{
+    width: 100%;
+}
+.noticeWrap .tableWrap thead th{
+    height: 50px;
+}
+.noticeWrap .tableWrap tbody td{
+    text-align: center;
+    height: 50px;
+}
+.noticeWrap .tableWrap thead tr th:nth-child(2){
+    text-align-last: left;
+}
+.noticeWrap .tableWrap tbody tr td:nth-child(2){
+    text-align-last: left;
+}
+/* .noticeWrap .tableWrap tfoot{
+    text-align: center;
+    word-spacing: 10px;
+}
+.noticeWrap .tableWrap tfoot td:first-letter{
+    font-weight: bold;
+} */
+.pagination{
+    text-align: center;
+    margin: 50px 0 150px;
+}
+.pagination a{
+    display: inline-block;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    line-height: 30px;
+    margin-left: 10px;
+}
+.pagination a:first-child{
+    margin-left: 0;
+}
+/* ----------------------하단------------------------ */
+.footer{
+    background: url(../img/ftbg.png) no-repeat center center;
+    background-size: cover;
+    text-align: center;
+    padding: 50px 0;
+}
+.sns li{
+    display: inline-block;
+    margin-right: 30px;
+}
+.sns li:last-child{
+    margin-right: 0;
+}
+.sns a{
+    display: block;
+    text-indent: -9999px;
+    width: 46px;
+    height: 46px;
+}
+.sns .fb{
+    background: url(../img/fb.png) no-repeat;
+}
+.sns .twt{
+    background: url(../img/twt.png) no-repeat;
+}
+.sns .daum{
+    background: url(../img/daum.png) no-repeat;
+}
+.sns .inst{
+    background: url(../img/ista.png) no-repeat;
+}
+.sns .wment{
+    background: url(../img/rr.png) no-repeat;
+}
+.copy{
+    font-size: 14px;
+    color: #fff;
+    font-family: 'S-CoreDream-3Light';
+    margin: 29px 0;
+}
+.footlogo{
+    vertical-align: top;
+}

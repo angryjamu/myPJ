@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Site</title>
+    <!-- 햄버거메뉴 아이콘 CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./style/mainstyle.css">
+</head>
+
+<body>
+    <header>
+        <h1>사이트 레이아웃</h1>
+        <p>작성자 : 홍길동</p>
+    </header>
+
+    <nav id="navi">
+        <a href="#">메뉴1</a>
+        <a href="#">메뉴2</a>
+        <a href="#">메뉴3</a>
+        <a href="#">메뉴4</a>
+        <a href="#" class="icon" onclick="showMenu()">
+            <i class="fa fa-bars"></i></a>
+    </nav>
+
+    <main>
+        <section>
+            <h2>소개</h2>
+            <h5>증명사진</h5>
+            <div class="image"><img src="images/fox.jpg" alt="600-400증명사진"></div>
+            <p>새로운 회계연도가 개시될 때까지 예산안이 의결되지 못한 때에는 정부는 국회에서</p>
+
+            <h3>추가 글</h3>
+            <p>예산안이 의결될 때까지 다음의 목적을 위한</p>
+            <div class="image"><img src="images/santa.jpg" alt="산타"></div>
+            <div class="image"><img src="images/sunset.jpg" alt=""></div>
+            <div class="image"><img src="images/train.jpg" alt=""></div>
+        </section>
+
+        <article>
+            <h2>컨텐츠 제목</h2>
+            <h5>작성일 : 2023.11.30</h5>
+            <div class="image">
+                <img src="images/gg.jpg" alt="사진">
+            </div>
+            <p>개요 설명</p>
+            <p>새로운 회계연도가 개시될 때까지 예산안이 의결되지 못한 때에는 정부는 국회에서새로운 회계연도가 개시될 때까지 예산안이 의결되지 못한 때에는 정부는 국회에서새로운 회계연도가 개시될 때까지 예산안이 의결되지 못한 때에는 정부는 국회에서</p>
+            <br>
+            <h2>컨텐츠 제목</h2>
+            <h5>작성일 : 2023.11.30</h5>
+            <div class="image">
+                <img src="images/sa.jpg" alt="사진">
+            </div>
+            <p>개요 설명</p>
+            <p>새로운 회계연도가 개시될 때까지 예산안이 의결되지 못한 때에는 정부는 국회에서새로운 회계연도가 개시될 때까지 예산안이 의결되지 못한 때에는 정부는 국회에서새로운 회계연도가 개시될 때까지 예산안이 의결되지 못한 때에는 정부는 국회에서</p>
+            <br>
+        </article>
+    </main>
+
+    <footer>
+        <h2>Footer</h2>
+    </footer>
+
+    <script>
+        function showMenu(){
+            let navi=document.getElementById('navi');
+            if (navi.className=='') {
+                navi.className='responsive';
+            }else{
+                navi.className='';
+            }
+        }
+    </script>
+</body>
+
+</html>

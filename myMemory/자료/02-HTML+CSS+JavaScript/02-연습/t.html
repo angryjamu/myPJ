@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tab_wrap{width: 800px; margin: 0 auto;}
+        .tab_wrap .tab_btn{overflow: hidden;}
+        .tab_wrap .tab_btn .btn{
+            background-color: rgba(210, 210, 210, 0.2); border: none; height: 80px; float: left; font-size: 16px; font-family: '맑은 고딕'; position: relative;
+            cursor: pointer;
+            transition: all 0.6s ease-in-out;
+        }
+
+        .tab_wrap .tab_btn .btn.active{background-color: #fff; color: #667eea;}
+
+        .tab_wrap .tab_btn .btn::before{
+            content: ""; position: absolute; left: 0; top: 0; width: 100%; height: 0; background-image: linear-gradient(135deg,#667eea 0%, #764ba2 100%);
+            transition: height 0.3s ease-in-out;
+        }
+
+        .tab_wrap .tab_btn .btn.active::before{height: 5px;}
+
+        .tab_wrap .tab_con .con{display: none; min-height: 180px; background-color: lightgray;}
+        .tab_wrap .tab_con .con.active{display: block;}
+
+    </style>
+</head>
+<body>
+    <div class="tab_wrap">
+        <div class="tab_btn">
+            <button class="btn active" data-tabcon="con1">탭메뉴1</button>
+            <button class="btn" data-tabcon="con2">탭메뉴2</button>
+            <button class="btn" data-tabcon="con3">탭메뉴3</button>
+        </div>
+
+        <div class="tab_con">
+            <div class="con active" id="con1">탭내용1</div>
+            <div class="con" id="con2">탭내용2</div>
+            <div class="con" id="con3">탭내용3</div>
+        </div>
+    </div>
+
+    <script>
+        //tabs 안에 있는 li를 변수에 담는다
+        // for문 작성
+        // 실제로 클릭하는 a태그를 찾아 tabLink 변수에 담는다
+        // tabLink를 클릭하면 함수 실행
+        // 내부 for문 작성
+        const tabLi = document.querySelectorAll('.tabs li')
+
+        for( let i = 0; i < tabLi.length; i++){
+            const tabLink = tabLi[i].querySelector('a')
+            tabLink.addEventListener('click', function(){
+                for( let j = 0; j < tabLi.length; j++){
+                    tabLi[j].classList.remove('is_on');
+                }// 내부 for문 끝나는부분
+                this.parentNode.classList.add('is_on');Z
+            })
+        }
+
+    </script>
+</body>
+</html>

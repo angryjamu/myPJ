@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 구글폰트 */
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600&display=swap');
+        body{font-family: 'Noto Sans KR', sans-serif; font-size: 16px; line-height: 1.5; color: #000;}
+
+        /* 초기화 */
+        body,ul{margin: 0; padding: 0;}
+        ul{list-style: none;}
+        a{text-decoration: none; color: #000;}
+
+        /* 레이아웃 */
+        .dropdown{width: 400px; overflow: hidden; margin: 0 auto;}
+        .dropdown button{
+            width: 100%; padding: 10px 20px; border: 0; text-align: left; cursor: pointer;
+            background-color: #fff; font-size: 18px;
+        }
+        .dropdown button::after{content: '\25b2'; float: right;}
+        .dropdown.closed button::after{content: '\25bc'; }
+        .dropdown .menu{background-color: yellow; max-height: 200px;}
+        .dropdown.closed .menu{max-height: 0;}    
+        .dropdown .menu li{}
+        .dropdown .menu li a{display: block; line-height: 40px; padding: 0 20px;}
+
+    </style>
+</head>
+<body>
+    <div class="dropdown closed">
+        <button>드롭다운메뉴</button>
+        <ul class="menu">
+            <li><a href="#">메뉴1</a></li>
+            <li><a href="#">메뉴2</a></li>
+            <li><a href="#">메뉴3</a></li>
+        </ul>
+    </div>
+    <script>
+        const dropMenu = document.querySelector('.dropdown button')
+        dropMenu.addEventListener('click', function(){
+            this.parentNode.classList.toggle('closed');    
+        })
+    </script>
+</body>
+</html>

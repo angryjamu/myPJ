@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="txt-inp1" value="" placeholder="아이디 입력">
+
+    <hr>
+
+    <input type="text" id="txt-inp2" placeholder="힌트 입력하는 곳">
+
+    <button type="button" onclick="schFun()">검색</button>
+
+    <div id="txt-box"> 여기에 검색한 글자가 보일거에요 </div>
+
+    <hr>
+
+    <h3>제일 좋아하는 과일은</h3>
+
+    <label> <input type="radio" name="fruit" id="" value="apple" checked> 사과 </label>
+    <label> <input type="radio" name="fruit" id="" value="banana" > 바나나 </label>
+    <label> <input type="radio" name="fruit" id="" value="orange" > 오렌지 </label>
+    
+    <hr>
+
+    <button type="button" onclick="findFruit()">제출하기</button>
+
+    <script>
+
+        function findFruit(){
+            const arrRadio = document.getElementsByName("fruit");
+            console.log(arrRadio);
+            console.log(arrRadio.length);
+
+            for( let i = 0 ; i < arrRadio.length  ; i++ ){
+                if(arrRadio[i].checked){
+                    alert( arrRadio[i].value + '를 선택하셨군요!!')
+                }
+                 
+            }
+
+        }
+
+
+
+        const txtInp1 = document.getElementById("txt-inp1");
+        const txtInp2 = document.getElementById("txt-inp2");
+        const txtBox = document.getElementById("txt-box");
+
+        function schFun(){
+            console.log(txtInp2.value);
+            txtBox.innerText = txtInp2.value;
+        }
+        
+        txtInp1.addEventListener( 'change' ,  function(e){
+            console.log( e );
+            console.log( e.target );
+            console.log( e.target.value );
+
+        } );
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 폰트설정 */
+        @import url('https://webfontworld.github.io/pretendard/Pretendard.css');
+        body{
+            font-family: 'Pretendard'; font-size: 16px; font-weight: 400; 
+            letter-spacing: -0.04em; line-height: 150%; color: #020d12;}
+
+        /* 초기화 */
+        *{box-sizing: border-box;}
+
+        body,h1,ul{margin: 0; padding: 0;}
+        ol,ul,li{list-style: none;}
+        a{text-decoration: none; color:inherit;}
+
+        header,nav{display: block;}
+
+        /* 레이아웃 */
+        #header{
+            position: relative; overflow: hidden;
+            transition: all 0.3s ease-in-out;
+        }
+        #header.open{height: 354px; box-shadow: 0 3px 3px 0 rgba(0,0,0,0.3);}
+        
+        
+        #header .inner{border: 1px solid red; width: 100%; max-width: 1278px; margin: 0 auto;}    
+        #header .inner::after{content: ""; display: block; clear: both;}
+
+        #header .logo{float: left;}
+        #header .logo img{width: 95px;}
+        #header .gnb{float: left; margin-left: 233px; background-color: aqua;} 
+
+        #header .gnb .depth1::after{
+            content: "";  width: 100%; height: 1px; display: block;
+            background-color: #7b7b7b;
+            position: absolute; left: 0; top: 85px; z-index: 10;
+        }
+
+        #header .gnb .depth1 > li{float: left; position: relative;}
+
+        #header .gnb .depth1 > li > a{
+            display: block; line-height: 85px; padding: 0 40px; border: 1px solid blue;
+            font-size: 19px; font-weight: 600;
+        }  
+        
+        #header .gnb .depth2{
+            position: absolute; left: 0; top: 85px; border: 1px solid green;
+            width: 100%; z-index: 20;
+            opacity: 0; height: 0; overflow: hidden;
+            transition: all 0.3s ease-in-out;
+        }
+
+        #header.open .gnb .depth2{opacity: 1; height: auto; overflow: visible;}
+
+
+        #header .gnb .depth2 > li > a{
+            display: block; 
+            line-height: 140%; padding: 10px 0; text-align: center;
+            font-size: 14.5px; font-weight: 500; color: #3a3e47;
+        }    
+    
+    </style>
+</head>
+<body>
+    <header id="header">
+        <div class="inner">
+            <h1 class="logo">
+                <a href="#"><img src="images/logo-purunet.png" alt="푸르넷"></a>
+            </h1>
+            <nav class="gnb">
+                <ul class="depth1">
+                    <li>
+                        <a href="#">메뉴1</a>
+                        <ul class="depth2">
+                            <li><a href="#">서브메뉴1</a></li>
+                            <li><a href="#">서브메뉴2</a></li>
+                            <li><a href="#">서브메뉴3</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">메뉴2</a>
+                        <ul class="depth2">
+                            <li><a href="#">서브메뉴1</a></li>
+                            <li><a href="#">서브메뉴2</a></li>
+                            <li><a href="#">서브메뉴3</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">메뉴3</a>
+                        <ul class="depth2">
+                            <li><a href="#">서브메뉴1</a></li>
+                            <li><a href="#">서브메뉴2</a></li>
+                            <li><a href="#">서브메뉴3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <script>
+        const gnb = document.querySelector('.gnb')
+        const header = gnb.parentNode.parentNode
+
+        console.log( header )
+
+        //const header = document.getElementById('header')
+
+        gnb.addEventListener('mouseenter' , function(){
+            this.parentNode.parentNode.classList.add('open');
+
+    
+        });
+
+        header.addEventListener('mouseleave' , function(){
+            this.classList.remove('open');
+
+            console.log(this)
+            console.log("마우스가 header영역에서 떠나갔다")
+        });
+
+    </script>
+
+</body>
+</html>

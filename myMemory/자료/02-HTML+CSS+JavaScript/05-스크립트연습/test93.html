@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <style>
+        body, h1, ul{margin: 0; padding: 0;}
+        ul{list-style: none;}
+        a{text-decoration: none; color: #000;}
+
+        #header{}
+        #header .inner{width: 1200px; height: 90px; margin: 0 auto; position: relative;}
+        #header .gnb{position: absolute; right: 0; top: 50%; transform: translateY(-50%);}
+        #header .gnb > ul::after{content: ""; display: block; clear: both;}
+        #header .gnb > ul > li{float: left; margin-left: 90px; position: relative;}
+        #header .gnb > ul > li > a{
+            display: block; padding: 28px 0 29px;
+            position: relative; 
+            z-index: 20;
+            background-color: pink;
+        }
+
+        #header .gnb > ul > li > a::after{
+            content: ""; position: absolute; left: 0; bottom: 20px;
+            width: 0; height: 5px; background-color: red;
+            transition: width 0.5s ease-in;
+        }
+        #header .gnb > ul > li > a::before{
+            content: ""; position: absolute; left: 0; bottom: 20px;
+            width: 0; height: 5px; background-color: black;
+            transition: width 0.2s ease-in;
+        }
+        
+        #header .gnb > ul > li:hover > a::after{width: 100%;}    
+        #header .gnb > ul > li:hover > a::before{width: 100%;}
+
+        #header .gnb > ul > li > ul{
+            position: absolute; left: 10%; top: 0; width: 240px;
+            transform: translateX(-50%);
+            z-index: 10;
+            background-color: aqua;
+            padding: 100px 0 20px;
+            text-align: center;
+            visibility: hidden;
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <div class="inner">
+            <h1>로고</h1>
+            <nav class="gnb">
+                <ul>
+                    <li><a href="#">메뉴글자1번</a>
+                       
+                    </li>
+                    <li><a href="#">메뉴글자2번</a>
+                        <ul>
+                            <li><a href="#">텍스트1</a></li>
+                            <li><a href="#">텍스트2</a></li>    
+                        </ul>
+                    </li>
+                    <li><a href="#">메뉴글자3번</a>
+                        
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <script>
+        $(document).ready(function(){
+
+            $('.gnb>ul>li').mouseenter(function(){
+                $(this)
+                .children('ul')
+                .css('visibility' , 'visible')
+                .animate({'left' : '50%' , 'opacity' : '1'}, 200)
+            })
+
+            $('.gnb>ul>li').mouseleave(function(){
+                $(this)
+                .children('ul')
+                .animate({'left' : '10%' , 'opacity' : '0'}, 200 , function(){
+                    $(this).css('visiblility' , 'hidden')
+                })
+            })
+
+        })
+    </script>
+</body>
+</html>

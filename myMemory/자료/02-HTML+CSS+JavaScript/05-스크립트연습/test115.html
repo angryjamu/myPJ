@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        header{
+            height: 130px;
+            background-color: lemonchiffon;
+        }
+
+        section {
+            /* border: 1px solid red; */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #393939;
+            min-height: 100vh;
+            justify-content: center;
+        }
+
+        section h1 {
+            /* border: 1px solid blue; */
+            color: #fff;
+            font-size: 90px;
+        }
+
+        section p {
+            /* border: 1px solid green; */
+            color: #fff;
+            font-size: 17px;
+            font-weight: 600;
+            position: relative;
+        }
+
+        section .animate{
+            opacity: 0;
+            filter: blur(5px);
+            transition: all 1s ease;
+        }
+
+        section.show-animate .animate{
+            opacity: 1;
+            filter: blur(0);
+        }
+
+        section .animate {
+            opacity: .05;
+        }
+
+        .sec-1 .animate {
+            transform: translateX(-100%);
+        }
+
+        .sec-1.show-animate .animate {
+            transform: translate(0);
+        }
+
+        .sec-2 .animate {
+            transform: translateX(100%);
+        }
+
+        .sec-2.show-animate .animate {
+            transform: translate(0);
+        }
+
+        .sec-3 .animate {
+            transform: scale(.7);
+        }
+
+        .sec-3.show-animate .animate {
+            transform: scale(1);
+        }
+
+        .sec-4 .showRight-animate {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #393939;
+            transition: width 1s;
+        }
+
+        .sec-4.show-animate .showRight-animate {
+            width: 0;
+        }
+
+        .sec-5 .images img {
+            max-width: 450px;
+            margin: 0 30px;
+            transform: translateX(-100%);
+            transition: all 1s;
+            transition-delay: calc(.2s * var(--i));
+        }
+
+        .sec-5.show-animate .images img {
+            transform: translateX(0);
+        }
+
+        footer{
+            height: 230px;
+            background-color: lavenderblush;
+        }
+    </style>
+    </style>
+</head>
+
+<body>
+    <header>헤더영역</header>
+    <section class="sec-1">
+        <h1 class="animate">제목작성</h1>
+        <p class="animate">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere quaerat harum voluptatem.
+            Quasi ipsam provident ipsa dolorum pariatur, exercitationem voluptatum. Voluptatibus impedit deserunt nisi
+            quos nihil. Facilis inventore magni doloribus.
+            Veniam ratione, iusto, nulla et at reiciendis aspernatur corporis maiores incidunt itaque exercitationem?
+            Tempora, impedit. Animi ea libero vel repellat adipisci impedit alias architecto aspernatur. Excepturi quae
+            eos ad quia?
+            Vel explicabo cupiditate aliquid beatae blanditiis! Quis dolore omnis, totam sit asperiores nobis molestias
+            nisi cum minus aut nesciunt impedit, obcaecati mollitia aliquam ut nulla. Ab temporibus officiis autem!
+            Sapiente?
+            Maiores temporibus magni dicta in hic iure soluta corrupti sint maxime necessitatibus, libero culpa
+            voluptatum alias fugiat qui aspernatur facilis explicabo illum laborum nihil ratione. Mollitia hic
+            recusandae consequatur nihil.
+            Neque ducimus optio tenetur a. Corporis dolor, quas, mollitia eius ipsam consectetur delectus recusandae at
+            eligendi nisi quos qui! Nisi, molestias. Possimus asperiores saepe explicabo, obcaecati voluptatum quasi
+            ducimus sed.
+            Exercitationem cupiditate vel maiores consectetur omnis fugiat, doloremque necessitatibus maxime molestiae
+            atque quidem odit dolores vero vitae iure aperiam dolorem. In praesentium aliquam quasi unde voluptas illo
+            veritatis sint ipsa?
+            Exercitationem ipsa velit totam rem vero expedita deleniti consectetur repellendus provident, magni
+            perferendis iste odit vitae officia adipisci nisi itaque tenetur inventore laborum asperiores pariatur
+            quisquam. Sunt rerum esse similique.
+            Voluptas officiis pariatur tempora aspernatur nobis laudantium inventore consequuntur molestiae, doloribus
+            nemo neque dolore, vero ab nam atque fugit suscipit molestias ullam vel, tempore quod rem velit voluptatem?
+            Dicta, eos.
+            Eos, quo eum odit, neque aliquid corporis magnam voluptatum, ipsam atque repellendus vitae dignissimos error
+            perspiciatis! Culpa nostrum, delectus, possimus provident corrupti tempore eos mollitia quasi praesentium
+            fuga, commodi odit!
+            Voluptatem quaerat ipsam eius facere repellat maiores sapiente dignissimos perspiciatis nam dolor delectus
+            deserunt, quia repudiandae! Neque, ducimus voluptatibus. Perspiciatis assumenda nam, quos delectus dolorum
+            voluptate. Officia consequatur corporis quasi?</p>
+    </section>
+    <section class="sec-2">
+        <h1 class="animate">제목작성</h1>
+        <p class="animate">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere quaerat harum voluptatem.
+            Quasi ipsam provident ipsa dolorum pariatur, exercitationem voluptatum. Voluptatibus impedit deserunt nisi
+            quos nihil. Facilis inventore magni doloribus.
+            Veniam ratione, iusto, nulla et at reiciendis aspernatur corporis maiores incidunt itaque exercitationem?
+            Tempora, impedit. Animi ea libero vel repellat adipisci impedit alias architecto aspernatur. Excepturi quae
+            eos ad quia?
+            Vel explicabo cupiditate aliquid beatae blanditiis! Quis dolore omnis, totam sit asperiores nobis molestias
+            nisi cum minus aut nesciunt impedit, obcaecati mollitia aliquam ut nulla. Ab temporibus officiis autem!
+            Sapiente?
+            Maiores temporibus magni dicta in hic iure soluta corrupti sint maxime necessitatibus, libero culpa
+            voluptatum alias fugiat qui aspernatur facilis explicabo illum laborum nihil ratione. Mollitia hic
+            recusandae consequatur nihil.
+            Neque ducimus optio tenetur a. Corporis dolor, quas, mollitia eius ipsam consectetur delectus recusandae at
+            eligendi nisi quos qui! Nisi, molestias. Possimus asperiores saepe explicabo, obcaecati voluptatum quasi
+            ducimus sed.
+            Exercitationem cupiditate vel maiores consectetur omnis fugiat, doloremque necessitatibus maxime molestiae
+            atque quidem odit dolores vero vitae iure aperiam dolorem. In praesentium aliquam quasi unde voluptas illo
+            veritatis sint ipsa?
+            Exercitationem ipsa velit totam rem vero expedita deleniti consectetur repellendus provident, magni
+            perferendis iste odit vitae officia adipisci nisi itaque tenetur inventore laborum asperiores pariatur
+            quisquam. Sunt rerum esse similique.
+            Voluptas officiis pariatur tempora aspernatur nobis laudantium inventore consequuntur molestiae, doloribus
+            nemo neque dolore, vero ab nam atque fugit suscipit molestias ullam vel, tempore quod rem velit voluptatem?
+            Dicta, eos.
+            Eos, quo eum odit, neque aliquid corporis magnam voluptatum, ipsam atque repellendus vitae dignissimos error
+            perspiciatis! Culpa nostrum, delectus, possimus provident corrupti tempore eos mollitia quasi praesentium
+            fuga, commodi odit!
+            Voluptatem quaerat ipsam eius facere repellat maiores sapiente dignissimos perspiciatis nam dolor delectus
+            deserunt, quia repudiandae! Neque, ducimus voluptatibus. Perspiciatis assumenda nam, quos delectus dolorum
+            voluptate. Officia consequatur corporis quasi?</p>
+    </section>
+    <section class="sec-3">
+        <h1 class="animate">제목작성</h1>
+        <p class="animate">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere quaerat harum voluptatem.
+            Quasi ipsam provident ipsa dolorum pariatur, exercitationem voluptatum. Voluptatibus impedit deserunt nisi
+            quos nihil. Facilis inventore magni doloribus.
+            Veniam ratione, iusto, nulla et at reiciendis aspernatur corporis maiores incidunt itaque exercitationem?
+            Tempora, impedit. Animi ea libero vel repellat adipisci impedit alias architecto aspernatur. Excepturi quae
+            eos ad quia?
+            Vel explicabo cupiditate aliquid beatae blanditiis! Quis dolore omnis, totam sit asperiores nobis molestias
+            nisi cum minus aut nesciunt impedit, obcaecati mollitia aliquam ut nulla. Ab temporibus officiis autem!
+            Sapiente?
+            Maiores temporibus magni dicta in hic iure soluta corrupti sint maxime necessitatibus, libero culpa
+            voluptatum alias fugiat qui aspernatur facilis explicabo illum laborum nihil ratione. Mollitia hic
+            recusandae consequatur nihil.
+            Neque ducimus optio tenetur a. Corporis dolor, quas, mollitia eius ipsam consectetur delectus recusandae at
+            eligendi nisi quos qui! Nisi, molestias. Possimus asperiores saepe explicabo, obcaecati voluptatum quasi
+            ducimus sed.
+            Exercitationem cupiditate vel maiores consectetur omnis fugiat, doloremque necessitatibus maxime molestiae
+            atque quidem odit dolores vero vitae iure aperiam dolorem. In praesentium aliquam quasi unde voluptas illo
+            veritatis sint ipsa?
+            Exercitationem ipsa velit totam rem vero expedita deleniti consectetur repellendus provident, magni
+            perferendis iste odit vitae officia adipisci nisi itaque tenetur inventore laborum asperiores pariatur
+            quisquam. Sunt rerum esse similique.
+            Voluptas officiis pariatur tempora aspernatur nobis laudantium inventore consequuntur molestiae, doloribus
+            nemo neque dolore, vero ab nam atque fugit suscipit molestias ullam vel, tempore quod rem velit voluptatem?
+            Dicta, eos.
+            Eos, quo eum odit, neque aliquid corporis magnam voluptatum, ipsam atque repellendus vitae dignissimos error
+            perspiciatis! Culpa nostrum, delectus, possimus provident corrupti tempore eos mollitia quasi praesentium
+            fuga, commodi odit!
+            Voluptatem quaerat ipsam eius facere repellat maiores sapiente dignissimos perspiciatis nam dolor delectus
+            deserunt, quia repudiandae! Neque, ducimus voluptatibus. Perspiciatis assumenda nam, quos delectus dolorum
+            voluptate. Officia consequatur corporis quasi?</p>
+    </section>
+    <section class="sec-4">
+        <h1 class="animate">제목작성</h1>
+        <p class="animate">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere quaerat harum voluptatem.
+            Quasi ipsam provident ipsa dolorum pariatur, exercitationem voluptatum. Voluptatibus impedit deserunt nisi
+            quos nihil. Facilis inventore magni doloribus.
+            Veniam ratione, iusto, nulla et at reiciendis aspernatur corporis maiores incidunt itaque exercitationem?
+            Tempora, impedit. Animi ea libero vel repellat adipisci impedit alias architecto aspernatur. Excepturi quae
+            eos ad quia?
+            Vel explicabo cupiditate aliquid beatae blanditiis! Quis dolore omnis, totam sit asperiores nobis molestias
+            nisi cum minus aut nesciunt impedit, obcaecati mollitia aliquam ut nulla. Ab temporibus officiis autem!
+            Sapiente?
+            Maiores temporibus magni dicta in hic iure soluta corrupti sint maxime necessitatibus, libero culpa
+            voluptatum alias fugiat qui aspernatur facilis explicabo illum laborum nihil ratione. Mollitia hic
+            recusandae consequatur nihil.
+            Neque ducimus optio tenetur a. Corporis dolor, quas, mollitia eius ipsam consectetur delectus recusandae at
+            eligendi nisi quos qui! Nisi, molestias. Possimus asperiores saepe explicabo, obcaecati voluptatum quasi
+            ducimus sed.
+            Exercitationem cupiditate vel maiores consectetur omnis fugiat, doloremque necessitatibus maxime molestiae
+            atque quidem odit dolores vero vitae iure aperiam dolorem. In praesentium aliquam quasi unde voluptas illo
+            veritatis sint ipsa?
+            Exercitationem ipsa velit totam rem vero expedita deleniti consectetur repellendus provident, magni
+            perferendis iste odit vitae officia adipisci nisi itaque tenetur inventore laborum asperiores pariatur
+            quisquam. Sunt rerum esse similique.
+            Voluptas officiis pariatur tempora aspernatur nobis laudantium inventore consequuntur molestiae, doloribus
+            nemo neque dolore, vero ab nam atque fugit suscipit molestias ullam vel, tempore quod rem velit voluptatem?
+            Dicta, eos.
+            Eos, quo eum odit, neque aliquid corporis magnam voluptatum, ipsam atque repellendus vitae dignissimos error
+            perspiciatis! Culpa nostrum, delectus, possimus provident corrupti tempore eos mollitia quasi praesentium
+            fuga, commodi odit!
+            Voluptatem quaerat ipsam eius facere repellat maiores sapiente dignissimos perspiciatis nam dolor delectus
+            deserunt, quia repudiandae! Neque, ducimus voluptatibus. Perspiciatis assumenda nam, quos delectus dolorum
+            voluptate. Officia consequatur corporis quasi?
+            <span class="showRight-animate"></span>
+        </p>
+    </section>
+    <section class="sec-5">
+        <div class="images">
+            <img src="img/keyring1.jpg" alt="이미지" style="--i : 0" class="animate">
+            <img src="img/keyring2.jpg" alt="이미지" style="--i : 1" class="animate">
+            <img src="img/keyring3.jpg" alt="이미지" style="--i : 2" class="animate">
+        </div>
+    </section>
+    <footer>풋터영역</footer>
+
+    <script>
+        let sections = document.querySelectorAll('section')
+
+        window.onscroll = function () {
+            sections.forEach(function(item, idx){
+                let top = window.scrollY
+                console.log(idx + '스크롤 ' + top)
+                let offset = item.offsetTop
+                console.log(idx + '섹션 위치값 ' + offset)
+                let height = item.offsetHeight
+                console.log(idx + '섹션 높이값 ' + height)
+
+                if(top >= offset && top < offset + height){
+                    item.classList.add('show-animate')
+                }else{
+                    item.classList.remove('show-animate')
+                }
+                
+            })
+        } // scroll 끝
+
+        window.addEventListener('scroll', function () {
+            // 실행문작성
+        }) // scroll 끝
+    </script>
+</body>
+
+</html>

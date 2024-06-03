@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .con-wrap {
+            border: 1px solid cyan;
+            text-align: center;
+        }
+
+        .con-wrap .thumbs {
+            display: inline-block;
+        }
+
+        .con-wrap .thumbs li {
+            float: left;
+            width: 72px;
+            border: 1px solid blue;
+        }
+
+        .con-wrap .thumbs li a {
+            display: block;
+            width: 100%;
+            border: 1px solid firebrick;
+        }
+
+        .con-wrap .thumbs li a img {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="con-wrap">
+        <div class="display"><img src="img/keyring1.jpg" alt="keyring"></div>
+        <ul class="thumbs">
+            <li>
+                <a href="img/keyring1.jpg"><img src="img/keyring1.jpg" alt="keyring1"></a>
+            </li>
+            <li>
+                <a href="img/keyring2.jpg"><img src="img/keyring2.jpg" alt="keyring2"></a>
+            </li>
+            <li>
+                <a href="img/keyring3.jpg"><img src="img/keyring3.jpg" alt="keyring3"></a>
+            </li>
+        </ul>
+    </div>
+
+
+    <script>
+        $(function () {
+            $('.thumbs li').click(function (e) {
+                e.preventDefault()
+                let showImg = $(this).children('a').attr('href')
+                $('.display').empty()
+
+                $('.display').append('<img src=' + showImg + '>')
+            })
+        })
+    </script>
+</body>
+
+</html>

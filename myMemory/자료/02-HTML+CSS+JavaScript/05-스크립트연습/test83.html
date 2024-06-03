@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <style>
+        .on{border: 3px solid red;}
+    </style>
+</head>
+<body>
+    <div class="outer-box">
+        <div class="inner-box">
+            <ul>
+                <li>
+                    <span>아이템1번</span>
+                </li>
+                <div>박스입니다</div>
+                <li>
+                    <span>아이템2번</span>
+                </li>
+                <li>
+                    <span>아이템3번</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 스크립트 작성 -->
+    <script>
+        $(function(){
+            $('span').parent().siblings('li').addClass('on');
+            $('.outer-box').children().addClass('on');
+            $('ul').css('background-color' , 'yellow');
+            $('ul').parent().css({'background-color' : 'pink' , 'border' : '3px solid blue'});
+        })
+    </script>
+</body>
+</html>

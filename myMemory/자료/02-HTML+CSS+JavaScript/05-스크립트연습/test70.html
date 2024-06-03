@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .accordion-item{}
+        .accordion-item .accordion-header{}
+        .accordion-item .accordion-header.active{ background-color: yellow;}
+        .accordion-item .accordion-body{display: none;}
+        .accordion-item .accordion-header.active + .accordion-body{display: block;}
+
+
+    </style>
+
+
+</head>
+<body>
+    <h1>자주묻는 질문과 답변</h1>
+    <div class="accordion-item">
+        <div class="accordion-header active">질문111입니다.</div>
+        <div class="accordion-body">답변입니다.<br> 두번째줄 입니다. <br> 세번째줄 입니다.</div>
+    </div>
+    <div class="accordion-item">
+        <div class="accordion-header">질문2222입니다.</div>
+        <div class="accordion-body">답변입니다.<br> 두번째줄 입니다. <br> 세번째줄 입니다.</div>
+    </div>
+    <div class="accordion-item">
+        <div class="accordion-header">질문333입니다.</div>
+        <div class="accordion-body">답변입니다.<br> 두번째줄 입니다. <br> 세번째줄 입니다.</div>
+    </div>
+
+    <script>
+        const accHeader = document.querySelectorAll('.accordion-header')
+        console.log(accHeader);
+
+        accHeader.forEach(function(ele, idx){
+            console.log(ele)
+            console.log(idx)
+
+            ele.addEventListener('click', function(){
+                console.log('질문을 클릭했습니다.')
+                console.log(ele)
+                ele.classList.toggle('active')
+            } )
+
+        })
+
+    </script>
+</body>
+</html>

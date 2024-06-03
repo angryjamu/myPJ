@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var grade;
+        var score=prompt("점수를 입력하세요.",0);
+        console.log(score);
+        console.log(typeof score);
+        score=parseInt(score);
+        console.log(typeof score);
+
+        if(score>=90){
+            grade="A";
+            document.write("<p>excellent</p>");
+        }else if(score>=80){
+            grade="B";
+            document.write("<p>very good</p>");
+        }else if(score>=70){
+            grade="C";
+            document.write("<p>good</p>");
+        }else if(score>=60){
+            grade="D";
+            document.write("<p>not bad</p>");
+        }else{
+            grade="F";
+            document.write("<p>more hard</p>");
+        }
+        document.write("점수는?"+"<br>"+score+"점 입니다.");
+        document.write("<br>");document.write("<br>");
+        document.write("학점은?"+"<br>"+grade+"학점 입니다.");
+        document.write("<br>");document.write("<br>");
+        document.write("다음 시험준비하세요");
+        console.log(grade);
+        
+    </script>
+</body>
+</html>

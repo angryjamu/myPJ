@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span id="txt-box">이곳에 선택된 옵션값이 출력됩니다.</span>
+    <hr>
+    <select>
+        <option>옵션선택</option>
+        <option value="맨투맨-S">맨투맨 S사이즈</option>
+        <option value="맨투맨-M">맨투맨 M사이즈</option>
+        <option value="맨투맨-L">맨투맨 L사이즈</option>
+        <option value="후드-S(+10,000원)">후드 S사이즈(+10,000원)</option>
+        <option value="후드-M(+10,000원)">후드 M사이즈(+10,000원)</option>
+        <option value="후드-L(+10,000원)">후드 L사이즈(+10,000원)</option>
+    </select>
+    <script>
+        const txt=document.getElementById('txt-box');
+        function txt(e) {
+            console.log(e.target);
+        }
+        
+    </script>
+</body>
+</html>

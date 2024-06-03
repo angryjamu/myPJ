@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>지금 가장 가고 싶은 곳은?</h2>
+    <label> <input type="checkbox" name="country" value="일본"> 일본 </label>
+    <label> <input type="checkbox" name="country" value="미국"> 미국 </label>
+    <label> <input type="checkbox" name="country" value="캐나다"> 캐나다 </label>
+    <label> <input type="checkbox" name="country" value="유럽" checked> 유럽 </label>
+    <hr>
+    <input type="button" value="답변하기" onclick="visit_most()">
+
+    <script>
+        let chekBoxes = document.getElementsByName("country");
+        let msg = '당신이 선택한 여행지는 '; // 출력메시지를 담기위해서 선언한 변수
+
+        console.log(chekBoxes);
+        console.log(msg); // undefind 값을 정의하지 않음 을 의미함
+
+        function visit_most(){
+            /* console.log( chekBoxes.length );
+            console.log( chekBoxes[0].value );
+            console.log( chekBoxes[1].value );
+            console.log( chekBoxes[2].value );
+            console.log( chekBoxes[3].value ); */
+            
+            //for문 시작
+            for( let i = 0; i < chekBoxes.length; i++ ){
+                if(chekBoxes[i].checked){
+                    console.log( chekBoxes[i].value )
+
+                    msg += chekBoxes[i].value  + '선택하셨네요';
+
+                }
+            } // for문 끝남
+
+            alert( msg ) ;
+
+        }
+
+    </script>
+
+</body>
+</html>

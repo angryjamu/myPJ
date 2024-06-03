@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{width: 150px; margin: 0 auto; position: relative;}
+        .container .album{border: 3px solid red; width: 150px; overflow: visible;}
+        .container .album .images{display: flex; position: relative; left: 0; transition: transform 0.6s;}
+        .images img{width: 150px; height: 150px;}
+
+        .container button{width: 100px; height: 30px; border: none; background: #000; color: #fff; cursor: pointer;}
+        .container button:disabled{background-color: lightgray; color: white;}    
+        
+        .container .prev{position: absolute; left: -60px; top: 280px;}
+        .container .next{position: absolute; right: -60px; top: 280px;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>이미지 슬라이드 - 자바스크립트 활용</h2>
+        <div class="album">
+            <div class="images">
+                <img src="img/k1.jpg" alt="1번 사진 인덱스0">
+                <img src="img/keyring1.jpg" alt="2번 사진 인덱스1">
+                <img src="img/keyring2.jpg" alt="3번 사진 인덱스2">
+                <img src="img/keyring3.jpg" alt="4번 사진 인덱스3">
+            </div>    
+        </div><!-- album 끝 -->
+
+        <button type="button" class="prev">이전사진</button>
+        <button type="button" class="next">다음사진</button>
+
+    </div><!-- //container 끝 -->
+
+    <script>
+        let curPos = 0; //현재 보여주는 이미지 인덱스 번호를 지정할 변수
+        let positionValue = 0; //이미지의 위치값(transform : traslateX)을 지정할 변수 
+        const IMAGE_WIDTH = 150 //이미지 너비값 const(상수 형태)로 선언 변수명을 대문자로 적는다
+        const prevBtn = document.querySelector('.prev');
+        const nextBtn = document.querySelector('.next');
+        const images = document.querySelector('.images');
+        
+
+        //다음사진을 보여주는 함수
+        function next(){
+            // 조건문 사진의 개수 4장 인덱스 번호 0번 시작이므로 마지막 번호는 3번
+            // css스타일을 자바스크립트로 수정 style
+            // 변수와 문자열을 조합해서 계산할경우 변수를 중괄호 앞에 $ 중괄호에 감싼다.
+            // 빽틱~~ 기호 키보드 물결~ 이랑 같이 있는거 ``
+            if( curPos < 3 ){
+                console.log(curPos)
+                prevBtn.removeAttribute('disabled')
+                positionValue -=  150; 
+                images.style.transform = `translateX( ${positionValue}px)`;
+                console.log('다음 이미지')
+                curPos +=  1;  
+            }
+            if( curPos == 3 ){ // 마지막 사진이 되었을 때
+                nextBtn.setAttribute('disabled', 'true')
+            }
+        }
+
+        function prev(){
+            if( curPos > 0 ){
+                console.log(curPos)
+                nextBtn.removeAttribute('disabled');
+                positionValue += 150;
+                images.style.transform = `translateX(${positionValue}px)` 
+                console.log('이전 이미지')
+                curPos -=  1; 
+                
+            }
+            if( curPos == 0 ){
+                prevBtn.setAttribute('disabled' ,'true')
+            }
+
+           
+        }
+
+        prevBtn.addEventListener('click', prev)
+        nextBtn.addEventListener('click', next)
+
+        
+
+    </script>
+</body>
+</html>
+

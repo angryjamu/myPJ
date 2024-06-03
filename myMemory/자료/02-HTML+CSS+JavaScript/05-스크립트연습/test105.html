@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        .sec{
+
+        }
+        .sec h2{
+
+        }
+        .sec .prod_box{
+            background-color: lavender;
+            margin-bottom: 128px;
+            height: 767px;
+        }
+        .sec .inner{
+            border: 1px solid red;
+            height: 100%;
+            position: relative;
+        }
+
+        .sec .box_wrap{
+            width: 720px;
+            height: 740px;
+            background-color: lavenderblush;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+
+        .sec .box_wrap .cover{
+            position: absolute;
+            z-index: 1;
+        }
+        .sec .box_wrap .cover a{}
+        .sec .box_wrap .cover a img{}
+
+        .sec .box_wrap .box{
+            position: absolute;
+        }
+        .sec .box_wrap .box a{}
+        .sec .box_wrap .box a img{}
+    </style>
+</head>
+<body>
+    <section class="sec sec_1">
+        <h2>제목</h2>
+        <div class="prod_box">
+            <div class="inner">
+                <div class="box_wrap">
+                    <div class="cover"><a href="#"><img src="img/apieu0.jpg" alt="어퓨어 이미지1"></a></div>
+                    <div class="box"><a href="#"><img src="img/apieu1.jpg" alt="어퓨어 이미지2"></a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        $(function(){
+            let boxWrap = $('.sec .prod_box .box_wrap')
+
+            boxWrap.mouseenter(function(){
+                
+                let condition = $(this).children().eq(0).is(':visible')
+
+                if(condition){
+                    $(this).children().eq(0).stop().fadeOut(700)
+                }
+            })
+            boxWrap.mouseleave(function(){
+                let condition = $(this).children().eq(1).is(':visible')
+
+                if(condition){
+                    $(this).children().eq(0).stop().fadeIn(700)
+                }
+            })
+        })
+    </script>
+</body>
+</html>

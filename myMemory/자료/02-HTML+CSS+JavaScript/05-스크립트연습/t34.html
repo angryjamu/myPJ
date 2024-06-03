@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr=[];
+        var fruits=['두리안','망고','애플망고','바나나','사과','용과','참외'];
+        var arr2=[456,'보라','789',true,false,function(){}];
+
+        for(var i=0;i<10;i++){
+            document.write(i);
+            document.write('<br>');
+        };
+        
+        for(var j=0;j<fruits.length;j++){
+            document.write('과일의 개수만큼 반복합니다.');
+            document.write('<br>');
+            document.write(j);
+            document.write('<br>');
+            document.write(fruits[j]);
+            document.write('<br>');
+        }
+
+        for(var fruits of fruits){
+            console.log(fruits);
+        }
+        
+        arr[0]='나나';
+        arr[1]='다다';
+        arr[2]='라라';
+        
+        console.log(arr);
+        console.log(arr2);
+        console.log(fruits);
+        console.log(fruits.length);
+    </script>
+</body>
+</html>

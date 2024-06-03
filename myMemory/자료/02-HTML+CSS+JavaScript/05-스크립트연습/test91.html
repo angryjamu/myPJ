@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        .wrap{position: relative;}
+        .box{
+            background-color: black; width: 300px; height: 400px;
+            position: absolute; left : -280px; top: 0;
+            color: #fff;
+        }
+        .box .btn{
+            position: absolute; right: -60px; top: 0;
+            width: 60px; height: 30px;
+            background-color: red; color: #fff;
+            border: 0; cursor: pointer;
+        }
+
+        .box .btn i{font-size: 12px; color: yellow;}
+
+        header{background-color: yellow; height: 100px;}
+        .content{background-color: lime; height: 2000px;}
+        footer{background-color: pink; height: 100px;}
+    </style>
+</head>
+<body>
+    <div class="wrap">    
+        <div class="box">
+            <button type="button" class="btn">
+                <span>열기</span>
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+            박스입니다.
+        </div>
+        <header>헤더영역</header>
+        <div class="content">메인컨텐츠</div>
+        <footer>푸터영역</footer>
+    </div>
+
+    <script>
+        $(function(){
+            $('.btn').click(function(){
+                $(this).toggleClass('on'); // on이 추가되므로 if문이 먼저 실행된다.  
+
+                if($(this).hasClass('on')){
+                    $(this).html('<span>닫기</span> <i class="fa-solid fa-arrow-left"></i>')
+                    $(this).parent().animate({'left' : '0'});
+                }else{
+                    $(this).html('<span>열기</span> <i class="fa-solid fa-arrow-right"></i>')
+                    $(this).parent().animate({'left' : '-280px'});
+                }
+            })
+        })
+    </script>
+</body>
+</html>

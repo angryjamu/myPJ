@@ -1,0 +1,15 @@
+@charset "utf-8";
+body,h2,ul,li,a,div{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+.list>li{
+    float: left;
+    outline: 3px solid pink;
+    margin-right: 35px;
+}
+.list>li:last-child{
+    margin-right: 0px;
+}

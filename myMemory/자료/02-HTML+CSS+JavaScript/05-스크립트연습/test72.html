@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .accordion-header{cursor: pointer;}
+        .accordion-header::after{
+            content: '\25BC'; display: inline-block; 
+            transition: transform 0.6s;
+        }
+        .accordion-header.active::after{transform: rotate(-180deg);}
+
+        .accordion-body{ max-height: 0; overflow: hidden;}
+    </style>
+</head>
+<body>
+
+    <div class="accordion-header">질문111번입니다.</div>
+    <div class="accordion-body">답변1111111번입니다.</div>
+
+    <div class="accordion-header">질문2222222번입니다.</div>
+    <div class="accordion-body">답변222222222222번입니다.</div>
+
+    <div class="accordion-header">질문333333번입니다.</div>
+    <div class="accordion-body">답변333333번입니다.</div>
+
+    <script>
+        const accHeader = document.querySelectorAll('.accordion-header')
+        console.log(accHeader)
+
+        const accBody0 = accHeader[0].nextElementSibling
+        const accBody1 = accHeader[1].nextElementSibling
+        const accBody2 = accHeader[2].nextElementSibling
+
+        console.log( accBody0 )
+
+        accHeader.forEach(function( ele , idx  ){
+            ele.addEventListener('click' , function(){
+                ele.classList.toggle('active');
+
+                const accBody = ele.nextElementSibling
+
+                if(ele.classList.contains('active')){
+                    accBody.style.maxHeight = accBody.scrollHeight + 'px';
+                }else{
+                    accBody.style.maxHeight = 0
+                }
+
+
+            }) 
+
+
+
+        })
+
+    </script>
+
+</body>
+</html>
