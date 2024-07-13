@@ -1009,6 +1009,11 @@ small {
     display: none;
 }
 
+/* --------------------program-------------------- */
+body#program .concept-section .swiper-wrapper{
+    overflow: hidden;
+}
+
 /* --------------------media-------------------- */
 @media screen and (min-width: 1441px) {
     #footer .footer-wrapper .left-box.kr {
