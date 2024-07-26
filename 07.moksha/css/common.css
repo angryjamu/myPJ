@@ -1133,7 +1133,10 @@ body#program .program-wrapper .second-section .content-box .sticked-box .right-b
     display: none;
 }
 
-body#program .program-wrapper .second-section .content-box .sticked-box .right-box .category-title-wrapper #spring:checked ~ .spring {
+body#program .program-wrapper .second-section .content-box .sticked-box .right-box .category-title-wrapper #spring:checked ~ .spring,
+body#program .program-wrapper .second-section .content-box .sticked-box .right-box .category-title-wrapper #summer:checked ~ .summer,
+body#program .program-wrapper .second-section .content-box .sticked-box .right-box .category-title-wrapper #fall:checked ~ .fall,
+body#program .program-wrapper .second-section .content-box .sticked-box .right-box .category-title-wrapper #winter:checked ~ .winter {
     border-bottom: 1px solid #000;
     color: #333333;
 }
