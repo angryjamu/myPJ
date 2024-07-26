@@ -1215,17 +1215,18 @@ body#program .program-wrapper .second-section .content-box .sticked-box .right-b
     margin-top: 60px;
 }
 
+/* 탭 JS */
 .menu-list-wrapper {
     display: none;
 }
 
-/* Show the active menu */
 #spring:checked ~ .spring-menu,
 #summer:checked ~ .summer-menu,
 #fall:checked ~ .fall-menu,
 #winter:checked ~ .winter-menu {
     display: block;
 }
+/* 탭 JS */
 
 /* --------------------media-------------------- */
 @media screen and (min-width: 1441px) {
