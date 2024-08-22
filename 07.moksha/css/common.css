@@ -1340,6 +1340,11 @@ body#program .program-wrapper .third-section .explanation-box .title {
     .content-box .left-box {
         margin-right: 100px;
     }
+
+    body#program .program-wrapper .second-section .content-box .sticked-box .right-box.lower-box {
+        margin-left: 35px;
+        margin-bottom: 0;
+    }
 }
 
 @media screen and (max-width: 1080px) {
@@ -1802,6 +1807,80 @@ body#program .program-wrapper .third-section .explanation-box .title {
 
     .second-section .right-box .text-box .text {
         display: none;
+    }
+
+    body#program .program-wrapper .second-section {
+        margin: 300px auto 0px;
+    }
+
+    body#program .program-wrapper .second-section .content-out-wrapper {
+        padding: 0 95px;
+    }
+    
+    body#program .program-wrapper .second-section .content-wrapper.horizontal {
+        padding-bottom: 220px;
+    }
+
+    body#program .program-wrapper .second-section .content-box {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0;
+    }
+
+    body#program .program-wrapper .second-section .content-box .left-box {
+        width: 100%;
+    }
+
+    body#program .program-wrapper .swiper-pagination {
+        width: 166px;
+        left: 25px;
+        bottom: -86px;
+    }
+
+    body#program .program-wrapper .second-section .content-box .sticked-box .right-box.lower-box {
+        margin-left: 0;
+    }
+
+    body#program .program-wrapper .second-section .content-box .sticked-box .right-box .category-title-section {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    body#program .program-wrapper .second-section .content-box .sticked-box .right-box .category-title-wrapper {
+        width: 100%;
+        margin-bottom: 73px;
+    }
+
+    body#program .program-wrapper .second-section .content-box .sticked-box .right-box .category-title-wrapper .category-title {
+        width: 100%;
+        font-size: 30px;
+        padding: 15px 26px;
+        margin-left: 0;
+    }
+
+    body#program .program-wrapper .second-section .content-box .sticked-box .right-box .menu-list-wrapper {
+        margin: 0 auto;
+    }
+
+    body#program .program-wrapper .second-section .content-box .sticked-box .right-box .spring-menu .menu-title, body#program .program-wrapper .second-section .content-box .sticked-box .right-box .summer-menu .menu-title, body#program .program-wrapper .second-section .content-box .sticked-box .right-box .fall-menu .menu-title, body#program .program-wrapper .second-section .content-box .sticked-box .right-box .winter-menu .menu-title {
+        font-size: 25px;
+        margin-bottom: 73px;
+        margin-bottom: 36px;
+    }
+
+    body#program .program-wrapper .second-section .content-box .sticked-box .right-box .spring-menu .list-wrapper .list-box .menu-list-title, body#program .program-wrapper .second-section .content-box .sticked-box .right-box .summer-menu .list-wrapper .list-box .menu-list-title, body#program .program-wrapper .second-section .content-box .sticked-box .right-box .fall-menu .list-wrapper .list-box .menu-list-title, body#program .program-wrapper .second-section .content-box .sticked-box .right-box .winter-menu .list-wrapper .list-box .menu-list-title {
+        margin-right: 25px;
+    }
+    
+    body#program .program-wrapper .second-section .content-box .sticked-box .right-box .spring-menu .list-wrapper .list-box .menu-list-title, body#program .program-wrapper .second-section .content-box .sticked-box .right-box .spring-menu .list-wrapper .list-box .menu-name, body#program .program-wrapper .second-section .content-box .sticked-box .right-box .summer-menu .list-wrapper .list-box .menu-list-title, body#program .program-wrapper .second-section .content-box .sticked-box .right-box .summer-menu .list-wrapper .list-box .menu-name, body#program .program-wrapper .second-section .content-box .sticked-box .right-box .fall-menu .list-wrapper .list-box .menu-list-title, body#program .program-wrapper .second-section .content-box .sticked-box .right-box .fall-menu .list-wrapper .list-box .menu-name, body#program .program-wrapper .second-section .content-box .sticked-box .right-box .winter-menu .list-wrapper .list-box .menu-list-title, body#program .program-wrapper .second-section .content-box .sticked-box .right-box .winter-menu .list-wrapper .list-box .menu-name {
+        font-size: 25px;
+    }
+
+    body#program .program-wrapper .second-section .content-box .sticked-box .right-box .menu-list-wrapper .attention {
+        font-size: 25px;
+        margin-top: 70px;
     }
 }
 
