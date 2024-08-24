@@ -1317,6 +1317,10 @@ body#program .program-wrapper .third-section .explanation-box .title {
         max-width: 650px;
         padding: 147px 0px 129px;
     }
+
+    body#program .program-wrapper .third-section {
+        max-width: 1087px;
+    }
 }
 
 @media screen and (max-width: 1360px) {
@@ -1414,6 +1418,32 @@ body#program .program-wrapper .third-section .explanation-box .title {
     .second-section .description-img-box4 .left-box {
         margin-bottom: 47px;
         width: 100vw;
+    }
+
+    body#program .program-wrapper .third-section .explanation-box {
+        flex-direction: column-reverse;
+    }
+
+    body#program .program-wrapper .third-section .explanation-box .title {
+        height: initial;
+        letter-spacing: 0px;
+        writing-mode: horizontal-tb;
+    }
+
+    body#program .program-wrapper .third-section .explanation-box .border::before {
+        width: 30px;
+        height: 1px;
+        border-left: none;
+        border-top: 1px solid #000;
+        margin: 34px 0;
+    }
+
+    body#program .program-wrapper .third-section .explanation-box .text {
+        height: initial;
+        letter-spacing: 0px;
+        margin-left: 0px;
+        margin-bottom: 48px;
+        writing-mode: horizontal-tb;
     }
 }
 
@@ -1881,6 +1911,48 @@ body#program .program-wrapper .third-section .explanation-box .title {
     body#program .program-wrapper .second-section .content-box .sticked-box .right-box .menu-list-wrapper .attention {
         font-size: 25px;
         margin-top: 70px;
+    }
+
+    body#program .program-wrapper .third-section {
+        max-width: 521px;
+        padding: 240px 32px;
+    }
+
+    body#program .program-wrapper .third-section .attention-box {
+        flex-direction: column-reverse;
+    }
+
+    body#program .program-wrapper .third-section .attention-box .button-box {
+        margin: 70px 0 0 auto;
+    }
+
+    body#program .program-wrapper .third-section .attention-box .attention {
+        height: initial;
+        font-size: 25px;
+        letter-spacing: 0px;
+        margin-right: 0px;
+        writing-mode: horizontal-tb;
+    }
+
+    body#program .program-wrapper .third-section .attention-box .title {
+        height: initial;
+        font-size: 26px;
+        letter-spacing: 0px;
+        margin-bottom: 32px;
+        writing-mode: horizontal-tb;
+    }
+
+    body#program .program-wrapper .third-section .explanation-box {
+        margin-bottom: 146px;
+    }
+
+    body#program .program-wrapper .third-section .explanation-box .title {
+        font-size: 26px;
+    }
+
+    body#program .program-wrapper .third-section .explanation-box .text {
+        font-size: 25px;
+        margin-right: 0px;
     }
 }
 
