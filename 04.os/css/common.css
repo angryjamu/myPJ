@@ -67,7 +67,7 @@
     padding-left: 40px;
 }
 
-.header .leftbox .nav ul {
+.header .leftbox .nav > ul {
     display: flex;
     flex-direction: row;
 }
@@ -85,6 +85,29 @@
     font-size: 18px;
     font-weight: 600;
     line-height: 80px;
+}
+
+.header .leftbox .nav .mainmenu > li > .submenu {
+    background: cyan;
+    width: 100%;
+    min-height: 300px;
+    position: absolute;
+    left: 0;
+    display: flex;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
+
+}
+
+.header .leftbox .nav .mainmenu > li:hover > .submenu {
+    opacity: 1;
+    visibility: visible;
+
+}
+
+.header .leftbox .nav .mainmenu > li > .submenu li h1 {
+    position: absolute;
 }
 
 .header .rightbox {
