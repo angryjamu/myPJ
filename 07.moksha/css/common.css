@@ -1013,7 +1013,8 @@ body#program .swiper-wrapper{
 }
 
 body#program .program-wrapper .second-section .content-box .left-box {
-    position: relative;
+    position: sticky;
+    top: 5vh;
 }
 
 body#program .program-section .swiper-button-next {
@@ -1108,6 +1109,7 @@ body#program .program-wrapper .second-section .content-box .left-box.img-box .im
 
 body#program .program-wrapper .second-section .content-box .sticked-box {
     height: 100%;
+    height: 2700px;
 }
 
 body#program .program-wrapper .second-section .content-box .sticked-box .right-box.lower-box {
